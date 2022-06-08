@@ -11,6 +11,7 @@
     * {
         margin: 0;
         padding: 0;
+        box-sizing: border-box;
     }
 
     html,
@@ -24,13 +25,15 @@
     section {
         display: flex;
         flex-direction: column;
-
         width: 100%;
         height: 100%;
     }
 
     section .container {
+        position: relative;
         flex: 1;
+        overflow: hidden;
+        background: url('./icon/人像框.png');
     }
 
     header {
@@ -104,6 +107,30 @@
         background-color: rgb(255, 23, 23);
         z-index: 2;
     }
+
+    video {
+        position: fixed;
+        width: 100%;
+        z-index: -9999;
+    }
+
+    .container .box {
+        width: 30%;
+    }
+
+    .container .box .content {
+        padding: 20px 20px 40px;
+    }
+
+    .container .box .content span {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: rgb(204, 2, 2);
+        color: #fff;
+
+    }
 </style>
 
 <body>
@@ -119,7 +146,15 @@
             </div>
         </header>
         <div class="container">
-
+            <video id="video"></video>
+            <div class="box">
+                <div class="content">
+                    <span>停止录制</span>
+                    <p>点击"开始录制"后请阅读以下文字:</p>
+                    <p>在整个考试过程中,不要移动身体,手部不要有动作,不能使用纸和笔,保持脸部在屏幕虚线框内,眼睛视线要始终直视屏幕,不回答问题时,嘴部不要有说话动作。</p>
+                </div>
+                <button>下一步</button>
+            </div>
         </div>
     </section>
 </body>
@@ -131,14 +166,13 @@
             video: true,
             audio: true
         }).then(res => {
-            const container = document.querySelector('.container')
+            const container = document.querySelector('#video')
             container.srcObject = res
             container.play();
             console.log(res);
         }).catch(err => {
             console.log(err);
         })
-
     })
 </script>
 
