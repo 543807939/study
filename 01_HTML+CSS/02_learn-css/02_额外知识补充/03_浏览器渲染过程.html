@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="box">
+        <ul>
+            <ol>下载index.html文件,然后从头开始解析</ol>
+            <ol>解析到外部引用的css文件时,下载css文件,但是css文件不会阻塞文件解析</ol>
+            <ol>将html文件解析成dom树</ol>
+            <ol>如果html解析完了但是css文件还没下载完,也不会直接渲染,css文件会解析成一个css树</ol>
+            <ol>将dom树和css树合并成一个render树</ol>
+            <ol>计算布局</ol>
+            <ol>渲染</ol>
+        </ul>
+    </div>
+</body>
+
+</html>
