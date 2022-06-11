@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .content+div {
+            font-size: 40px;
+            color: #f08;
+        }
+
+        .content~div {
+            height: 300px;
+            background-color: #f80;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="content">
+            1. 相邻兄弟选择器: .content+div
+        </div>
+        <div class="content1">
+            2. 普遍兄弟选择器: .content~div
+        </div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+
+</html>
