@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 300px;
+            height: 300px;
+            background-color: #f08;
+        }
+
+        .inner-box {
+            width: 100px;
+            height: 100px;
+            background-color: #08f;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="inner-box"></div>
+    </div>
+    <h2>设置内部盒子距离左边30px,可以通过设置父盒子的padding-left:30px; 但是会把父盒子变大, 需要设置box-sizing:border-box;</h2>
+    <h2>通过设置margin-left:30px;会发生margin传递</h2>
+</body>
+
+</html>

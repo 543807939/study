@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 300px;
+            height: 300px;
+            margin: auto;
+            background-color: #f08;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        块级盒子默认占据父元素的全部宽度<br>
+        但是如果给块级元素设置了width属性,则margin-right会被默认设置为auto;<br>
+        值为auto的时候,会将剩余的宽度都分给margin-right;<br>
+        这时候如果设置margin-left为auto,则会将剩余的全部宽度给margin-left;<br>
+        同时设置margin-left和margin-right都为auto,则margin-left和margin-right会平分剩余的宽度
+    </div>
+</body>
+
+</html>

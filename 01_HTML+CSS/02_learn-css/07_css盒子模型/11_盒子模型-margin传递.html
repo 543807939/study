@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 300px;
+            height: 300px;
+            background-color: #f08;
+        }
+
+        .inner-box {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            /* margin-top: 100px; */
+
+            background-color: #08f;
+        }
+
+        .small-box {
+            width: 50px;
+            height: 50px;
+            margin-left: 100px;
+            background-color: #0f8;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>margin传递只发生在top和bottom; left和right是不会传递的</h2>
+    <h2>解决margin传递的方案有以下几种</h2>
+    <ul>
+        <li>1. 设置父元素的padding,而不是子元素设置margin</li>
+        <li>2. 给父元素设置一个边框,不是很推荐</li>
+        <li>3. 触发父盒子的BFC,最常见的是设置 overflow:hidden;</li>
+    </ul>
+    <div class="box">
+        <div class="inner-box first"></div>
+        <div class="inner-box second">
+            <div class="small-box"></div>
+        </div>
+    </div>
+</body>
+
+</html>
