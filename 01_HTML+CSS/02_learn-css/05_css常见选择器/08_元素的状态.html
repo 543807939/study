@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box:hover {
+            color: #f08;
+        }
+
+        .box:active {
+            color: #f80;
+        }
+
+
+        /* 有链接的伪类 */
+        a:link {
+            color: #08f;
+        }
+
+        /* 已经访问过 */
+        a:visited {
+            color: #f80;
+        }
+
+        /* 鼠标悬浮 */
+        a:hover {
+            color: #0f8;
+        }
+
+        /* 正在活跃 */
+        a:active {
+            color: #f08;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        哈哈哈
+    </div>
+    <a href="http://www.bilibili.com">来看b站吧</a>
+    <p>一个元素需要添加这么多伪类时,顺序为 LVFHA</p>
+    <p>link / visited / focus / hover / active</p>
+</body>
+
+</html>
