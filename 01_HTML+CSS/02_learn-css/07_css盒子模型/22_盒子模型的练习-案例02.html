@@ -1,12 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <style>
+        .box {
+            display: block;
+            width: 234px;
+            height: 300px;
+            margin: 100px auto;
+            padding: 20px 10px;
+            text-align: center;
+            background-color: #fff;
+            box-sizing: border-box;
+        }
+
+        .box:hover {
+            box-shadow: 0 0 7px rgba(0, 0, 0, .1);
+        }
+
+        .figure {
+            width: 160px;
+            height: 160px;
+            margin: 0 auto 18px;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .title {
+
+            color: #333;
+        }
+
+        .desc {
+            margin-bottom: 10px;
+            color: #b0b0b0;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .price {
+            color: #ff6700;
+        }
+
+        .del {
+            color: #b0b0b0;
+            text-decoration: line-through;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <a class="box">
+        <div class="figure">
+            <img
+                src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/18d2099cb0b05bbd23cb1915dfc9d0d6.jpg?thumb=1&w=200&h=200&f=webp&q=90">
+        </div>
+        <h3 class="title">Redmi K50 Pro</h3>
+        <p class="desc">40dB宽频主动降噪 | HiFi高保真音质 | HRTF专业调音</p>
+        <p><span class="price">2699元起</span> <span class="del">2999元</span></p>
+    </a>
 </body>
+
 </html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box,
+        input {
+            width: 1000px;
+            height: 1000px;
+            line-height: 1000px;
+            font-size: 100px;
+            background-image: url('../images/小熊维尼.webp'), url('../images/哆啦A梦.webp');
+            background-repeat: no-repeat;
+            background-color: #f08;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text">
+    <h2>
+        背景图片会盖在(而不是覆盖)在background-color上
+    </h2>
+    <h2>
+        背景图片可以设置很多张,第一张会放在最上边,依次层叠
+    </h2>
+    <h2>
+        设置背景图片的元素需要有宽高,不然展示不出来
+    </h2>
+    <div class="box"></div>
+</body>
+
+</html>
