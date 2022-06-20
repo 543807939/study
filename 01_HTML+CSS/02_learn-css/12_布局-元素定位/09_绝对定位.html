@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            position: relative;
+            width: 700px;
+            height: 700px;
+            background-color: #f08;
+            z-index: 999;
+        }
+
+        .box {
+            width: 500px;
+            height: 500px;
+            background-color: #f80;
+        }
+
+        .inner-box {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 300px;
+            height: 200px;
+            background-color: #08f;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="inner-box"></div>
+            <p>绝对定位:absoulte;</p>
+            <p>会脱离标准流</p>
+            <p>top,left,right,bottom相对的是上一级非static元素</p>
+            <p>如果找不到,则相对视口</p>
+        </div>
+    </div>
+</body>
+
+</html>

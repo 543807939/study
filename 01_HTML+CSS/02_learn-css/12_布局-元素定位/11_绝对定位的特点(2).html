@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            position: relative;
+            width: 400px;
+            height: 400px;
+            background-color: #f08;
+        }
+
+        .inner-box {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background-color: #0f8;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>
+        元素的width和height的初始值为auto <br>
+        元素的margin默认是0 <br>
+        left right bottom top 初始值为 auto
+    </h2>
+    <h2>
+        父非static定位元素的宽度 = 绝对定位元素的宽度 + left + right + margin-left + margin-right <br>
+        父非static定位元素的高度 = 绝对定位元素的高度 + top + bottom + margin-top + margin-bottom
+    </h2>
+    <h2>
+        所以,当一个元素设置left和right为0时,宽度会变成父非static定位元素的宽度
+    </h2>
+    <h2>
+        如果想让一个元素水平居中,可以设置父元素定位为非static,子元素设置为absoulte. width设置一定的宽度,left和right设置为0,margin-left和margin-right设置为auto <br>
+        如果想让一个元素垂直居中,可以设置父元素定位为非static,子元素设置为absoulte. height设置一定的高度,top和bottom设置为0,margin-top和margin-bottom设置为auto <br>
+    </h2>
+    <div class="box">
+        <div class="inner-box"></div>
+    </div>
+</body>
+
+</html>

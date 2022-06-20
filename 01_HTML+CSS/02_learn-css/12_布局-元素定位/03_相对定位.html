@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        .box {
+            position: relative;
+            top: 40px;
+            width: 300px;
+            height: 300px;
+            background-color: #f80;
+            z-index: -1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">相对定位:relative;<br>
+        可以设置top,left,bottom,right <br>
+        移动是相对自己原来的位置 <br>
+        元素还是占据自己原来的位置 <br>
+        常用于在不影响其他元素位置的情况下,对当前元素进行微调
+    </div>
+    <p>我是一个p</p>
+</body>
+
+</html>

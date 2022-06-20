@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            margin: 0;
+        }
+
+        section {
+            width: 140px;
+            height: 204px;
+        }
+
+        .cover {
+            position: relative;
+            display: block;
+        }
+
+        .cover .mask {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('../images/coverall.png') no-repeat;
+            background-position: no-repeat 0 -1170px;
+        }
+
+        .cover img {
+            width: 100%;
+            display: block;
+        }
+
+        .cover .bottom {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            height: 27px;
+            line-height: 27px;
+        }
+
+        .cover .bottom span {
+            font-size: 12px;
+            color: #ccc;
+            margin-left: 32px;
+            vertical-align: top;
+        }
+
+        .cover .bottom i {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: url('../images/iconall.png') no-repeat;
+        }
+
+        .cover .bottom .headset {
+            background-position: 0 -24px;
+            width: 14px;
+            height: 11px;
+            left: 10px;
+            bottom: 9px;
+        }
+
+        .cover .bottom .play {
+            background-position: 0 0;
+            width: 16px;
+            height: 17px;
+            right: 10px;
+            bottom: 6px;
+        }
+
+        .dec {
+            font-size: 14px;
+            color: #000;
+            text-decoration: none;
+        }
+
+        .dec:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <a class="cover" href="http://www.baidu.com">
+            <div class="mask"></div>
+            <img src="../images/piano.jpg">
+            <div class="bottom">
+                <i class="headset"></i>
+                <span>78万</span>
+                <i class="play"></i>
+            </div>
+        </a>
+        <a class="dec">
+            钢琴独奏 | 当世界喧嚣时 宇宙依然宁静</a>
+    </section>
+</body>
+
+</html>
