@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        [class*='box'] {
+            width: 300px;
+            height: 300px;
+            background: #f08;
+            margin-bottom: 100px;
+        }
+
+        .box1 {
+            box-sizing: content-box;
+            padding: 20px;
+            color: #f00;
+            border: 20px solid;
+        }
+
+        .box2 {
+            box-sizing: border-box;
+            padding: 20px;
+            color: #f00;
+            border: 20px solid;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1">
+        box-sizing可以设置如何计算一个元素的总宽度和总高度<br>
+        值有两种:
+        1. content-box. 这种设置的width和height只是content的宽高,边框和padding也会影响盒子的大小
+    </div>
+    <div class="box2">
+        2. border-box. 这种设置的宽高是盒子的总宽高,包含了border和padding
+    </div>
+</body>
+
+</html>

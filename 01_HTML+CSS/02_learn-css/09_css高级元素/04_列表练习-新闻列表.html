@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <style>
+        li {
+            line-height: 24px;
+        }
+
+        li>a {
+            display: inline-block;
+        }
+
+        li>a>div:hover {
+            color: #f04142;
+        }
+
+        li>a>span {
+            display: inline-block;
+            width: 30px;
+            text-align: center;
+            margin-right: 5px;
+        }
+
+        li:nth-child(1)>a>span {
+            color: #f08;
+        }
+
+        li:nth-child(2)>a>span {
+            color: #f80;
+        }
+
+        li:nth-child(3)>a>span {
+            color: #0f8;
+        }
+
+
+
+        li>a>div {
+            position: relative;
+            display: inline-block;
+            width: 300px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            vertical-align: top;
+        }
+
+        li>a>div.hot::after {
+            position: absolute;
+            right: 0px;
+            top: 2px;
+            content: '';
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background: url('../images/hot.svg') center no-repeat;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li><a href="">
+                <span>1</span>
+                <div class="title hot">
+                    6 月 18 日河南新财富集团犯罪事实已初步查明，涉事人员都将面临哪些处罚？储户的存款该向谁追讨？</div>
+            </a></li>
+        <li><a href="">
+                <span>2</span>
+                <div class="title">
+                    中科院首次发现人类中耳由鱼鳃演变而来实物证据，这对研究人类进化有何帮助？</div>
+            </a></li>
+        <li><a href="">
+                <span>3</span>
+                <div class="title">
+                    男人成为父亲以后就会长大吗？</div>
+            </a></li>
+        <li><a href="">
+                <span>4</span>
+                <div class="title">
+                    全国人大代表提议健康码应该收归国家统一管理，如何看待这一建议？实现起来难度大吗？</div>
+            </a></li>
+    </ul>
+</body>
+
+</html>
