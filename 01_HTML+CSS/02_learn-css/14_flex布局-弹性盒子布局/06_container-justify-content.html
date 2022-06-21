@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: space-evenly;
+            width: 1000px;
+            height: 1000px;
+            background-color: #0f8;
+        }
+
+        .item {
+            width: 200px;
+            height: 200px;
+            background-color: #f08;
+        }
+    </style>
+</head>
+
+<body>
+    <p>
+        justify-content决定了flex item在main axis上的排序方式: <br>
+        flex-start:与main start 对齐 <br>
+        flex-end: 与main end 对齐 <br>
+        center: 居中对齐 <br>
+        space-between: flex items 之间的距离相等,与main start 和main end 两端对齐 <br>
+        space-around: flex items 之间的距离相等, flex item 与main start,main end之间的距离为flex items之间距离的一半 <br>
+        space-evenly: flex items 之间的距离相等,flex item 与 main start,main end之间的距离等于flex itsms之间的距离
+    </p>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+    </div>
+</body>
+
+</html>

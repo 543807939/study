@@ -1,3 +1,4 @@
+!
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,9 +10,7 @@
     <style>
         .container {
             display: flex;
-            flex-direction: column;
-            flex-wrap: wrap;
-
+            flex-flow: row wrap;
             width: 500px;
             height: 500px;
             background-color: #f80;
@@ -27,9 +26,7 @@
 
 <body>
     <p>
-        可以通过设置flex-wrap设置元素是否换行,默认是nowrap. <br>
-        设置 flex-wrap: wrap可以使item换行 <br>
-        wrap-reverse 可以使交叉轴的开始和结束互换
+        flex-flow是flex-direction和flex-warp的简写,二者顺序可以任意
     </p>
     <div class="container">
         <div class="item item1">1</div>

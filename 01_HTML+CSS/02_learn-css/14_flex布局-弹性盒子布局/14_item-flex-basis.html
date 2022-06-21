@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            width: 1000px;
+            height: 1000px;
+        }
+
+        .item {
+            flex-basis: 120px;
+            height: 120px;
+        }
+    </style>
+</head>
+
+<body>
+    <p>
+        flex-basic 用来设置 flex items在主轴方向的基本尺寸 <br>
+        设置了该属性之后,如果元素内容超出flex-basis则会拉伸元素
+    </p>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">my name is coder_asdasdasdasd_asdasdasdas_dasdasd</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+    </div>
+</body>
+<script>
+    const items = document.querySelectorAll('.item')
+    for (const item of items) {
+        item.style.backgroundColor = `rgba(${255 * Math.random()},${255 * Math.random()},${255 * Math.random()})`
+    }
+</script>
+
+</html>
