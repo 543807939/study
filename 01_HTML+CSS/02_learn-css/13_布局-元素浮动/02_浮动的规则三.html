@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .item {
+            float: left;
+            width: 100px;
+            height: 100px;
+            background-color: #f08;
+        }
+    </style>
+</head>
+
+<body>
+    <p>浮动的元素不能层叠</p>
+    <p>如果一个元素浮动,另一个元素已经在那个位置了,后浮动的元素将紧贴着前一个浮动元素(左浮动找左浮动,右浮动找右浮动)</p>
+    <p>如果水平方向剩余的空间不够显示浮动元素,浮动元素将向下移动,直到有充足的空间为止</p>
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+</body>
+
+</html>

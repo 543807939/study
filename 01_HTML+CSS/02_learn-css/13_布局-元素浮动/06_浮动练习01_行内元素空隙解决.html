@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box span {
+            float: left;
+            background-color: #f08;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 将多个行内级元素中间的空格去掉的方法
+        1. 删除换行符(不推荐)
+        2. 将父级元素font-size设置成0,但是子元素需要设置回来(不推荐)
+        3. 浮动
+        4. flex(推荐)
+    -->
+    <div class="box">
+        <span>aaa</span>
+        <span>bbb</span>
+        <span>ccc</span>
+    </div>
+    <p>
+        将多个行内级元素中间的空格去掉的方法 <br>
+        1. 删除换行符(不推荐) <br>
+        2. 将父级元素font-size设置成0,但是子元素需要设置回来(不推荐) <br>
+        3. 浮动 <br>
+        4. flex(推荐) <br>
+    </p>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        [class*='item'] {
+            width: 100px;
+            height: 100px;
+            background-color: #f08;
+        }
+
+        .item1 {
+            float: left;
+        }
+
+        .fl {
+            float: left;
+        }
+
+        .fr {
+            float: right;
+        }
+
+
+
+        .box {
+            width: 800px;
+            height: 400px;
+            margin: 100px auto;
+            background-color: #0f8;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="item1">1</div>
+    <div class="item2">2</div>
+    <p>
+        元素浮动之后会脱离标准流 <br>
+        会向左或者向右移动,直到自己的边界紧贴着包含块(一般是父元素)或者其他浮动元素的边界为止 <br>
+        定位元素会层叠在浮动元素上面 <br>
+        浮动元素的边界不能超出包含块的边界 <br>
+    </p>
+    <div class="box">
+        <div class="item fl">1</div>
+        <div class="item fr">2</div>
+    </div>
+</body>
+
+</html>

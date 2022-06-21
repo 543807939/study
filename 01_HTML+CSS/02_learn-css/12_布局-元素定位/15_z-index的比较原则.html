@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            position: relative;
+            z-index: 999;
+        }
+
+        .item {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 200px;
+            height: 200px;
+        }
+
+        .box1 {
+            background-color: #f08;
+        }
+
+        .box2 {
+            left: 40px;
+            top: 40px;
+            background-color: #0f8;
+            z-index: 10;
+        }
+
+        .box3 {
+            left: 80px;
+            top: 80px;
+            background-color: #80f;
+        }
+
+        .inner-box {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 30px;
+            height: 30px;
+            z-index: 9999;
+            background-color: #f08;
+        }
+    </style>
+</head>
+
+<body>
+    <p>
+        z-index的比较原则: <br>
+        如果是兄弟关系: z-index越大,层叠在越上边;z-index相等,后边的元素层叠在上面
+        如果不是兄弟关系: 各自从元素自己和祖先元素中,找出邻近的2个定位元素比较,而且这两个元素必须有z-index
+    </p>
+    <div class="item box1">我是盒子1</div>
+    <div class="item box2">我是盒子2</div>
+    <div class="item box3">我是盒子3
+        <div class="inner-box">
+            层级很高,但是不会展示
+        </div>
+    </div>
+</body>
+
+</html>
