@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .clear::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 0;
+            visibility: hidden;
+            clear: both;
+        }
+
+        .content {
+            width: 1190px;
+            margin: 0 auto;
+        }
+
+        .content .wrapper {
+            margin-right: -10px;
+        }
+
+        .item {
+            float: left;
+            width: 290px;
+            margin: 0 10px 10px 0;
+            background-color: #f08;
+        }
+
+        .item.left {
+            height: 370px;
+        }
+
+        .item.right {
+            height: 180px;
+        }
+
+        .box {
+            height: 100px;
+            background-color: #08f;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content clear">
+        <div class="wrapper">
+            <div class="item left"></div>
+            <div class="item left"></div>
+            <div class="item right"></div>
+            <div class="item right"></div>
+            <div class="item right"></div>
+            <div class="item right"></div>
+            <div class="item right"></div>
+            <div class="item right"></div>
+            <div class="item right"></div>
+            <div class="item right"></div>
+            <div class="item right"></div>
+            <div class="item right"></div>
+            <div class="item right"></div>
+            <div class="item right"></div>
+            <div class="item right"></div>
+            <div class="item right"></div>
+            <div class="item right"></div>
+            <div class="item right"></div>
+            <div class="item right"></div>
+            <div class="item right"></div>
+            <div class="item right"></div>
+            <div class="item right"></div>
+            <div class="item right"></div>
+        </div>
+    </div>
+    <div class="box"></div>
+</body>
+
+</html>

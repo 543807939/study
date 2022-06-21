@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: inline-flex;
+            width: 400px;
+            justify-content: space-between;
+        }
+
+        .item {
+            width: 40px;
+            height: 40px;
+            background-color: #f08;
+        }
+    </style>
+</head>
+
+<body>
+    <p>
+        开启了flex布局的容器叫做: flex container <br>
+        flex container里的直接子元素叫做 flex item
+    </p>
+    <p>
+        flex item的布局会受到flex container属性的设置来进行控制和布局 <br>
+        flex item 不再严格区分行内和块级元素 <br>
+        flex item 默认包裹内容,但是可以设置宽高
+    </p>
+    <p>
+        可以通过设置display为flex或者inline-flex来设置容器开启flex布局
+    </p>
+    <p>
+        元素是沿着主轴方向排序的,默认是x轴;可以通过flex-direction来改变主轴的方向
+    </p>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+        <div class="item">10</div>
+        <div class="item">11</div>
+        <div class="item">12</div>
+        <div class="item">13</div>
+        <div class="item">14</div>
+        <div class="item">15</div>
+        <div class="item">16</div>
+        <div class="item">17</div>
+        <div class="item">18</div>
+        <div class="item">19</div>
+        <div class="item">20</div>
+    </div>
+    <span>aaaaa</span>
+</body>
+
+</html>
