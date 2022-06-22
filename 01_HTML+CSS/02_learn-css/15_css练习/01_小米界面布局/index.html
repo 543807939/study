@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小米官网</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <style>
+        .dress {
+            /* background-color: #f08; */
+        }
+
+        .dress .header {
+            height: 58px;
+            line-height: 58px;
+            font-size: 22px;
+        }
+
+        .dress .header .item {
+            padding: 3px 0;
+            margin-left: 30px;
+            font-size: 16x;
+        }
+
+
+        .dress .header .item:hover,
+        .dress .header .item.active {
+            color: #ff6700;
+            border-bottom: 2px solid #ff6700;
+        }
+
+        .dress .list {
+            margin-left: -14px;
+        }
+
+        .dress .list .item {
+
+            float: left;
+            width: 234px;
+            height: 300px;
+            margin: 0 0 14px 14px;
+            background-color: #f08;
+            transition: all .1s linear;
+
+        }
+
+        .dress .list .item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 10px rgba(0, 0, 0, .4);
+        }
+
+        .dress .list .item a {
+            display: block;
+            height: 100%;
+        }
+
+        .dress .list .item1 {
+            height: 614px;
+        }
+
+        .dress .list .item9,
+        .dress .list .item10 {
+            height: 143px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mi-wrapper dress">
+        <div class="header clear-fix">
+            <div class="left-area left">
+                <h3>智能穿戴</h3>
+            </div>
+            <div class="right-area right">
+                <a href="#" class="item active hot">热门</a>
+                <a href="#" class="item dress">穿戴</a>
+            </div>
+        </div>
+        <ul class="list">
+            <li class="item item1"><a href="#">1</a></li>
+            <li class="item item2"><a href="#">2</a></li>
+            <li class="item item3"><a href="#">3</a></li>
+            <li class="item item4"><a href="#">4</a></li>
+            <li class="item item5"><a href="#">5</a></li>
+            <li class="item item6"><a href="#">6</a></li>
+            <li class="item item7"><a href="#">7</a></li>
+            <li class="item item8"><a href="#">8</a></li>
+            <li class="item item9"><a href="#">9</a></li>
+            <li class="item item10"><a href="#">10</a></li>
+        </ul>
+    </div>
+</body>
+
+</html>
