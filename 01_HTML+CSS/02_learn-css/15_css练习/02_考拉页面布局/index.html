@@ -33,18 +33,42 @@
             float: left;
             width: 275px;
             height: 271px;
-           
+
             border: 1px solid #000;
             border-left: none;
             background-color: #ff0;
             box-sizing: border-box;
         }
-        .sport .item.item-center .center-item:nth-child(n+3){
+
+        .sport .item.item-center .center-item:nth-child(n+3) {
             margin-top: -1px;
         }
+
         .sport .item.item-right {
             width: 220px;
             background-color: #08f;
+        }
+
+
+
+        .sport .item.item-right .item {
+            float: left;
+            width: 220px;
+            height: 120px;
+            border: 1px solid #000;
+            border-left: none;
+            background-color: #8f0;
+            box-sizing: border-box;
+        }
+
+        .sport .item.item-right .header {
+            width: 220px;
+            height: 61px;
+        }
+
+        .sport .item.item-right .item:nth-child(n+2) {
+            height: 121px;
+            margin-top: -1px;
         }
     </style>
 </head>
@@ -58,7 +82,13 @@
             <div class="center-item">3</div>
             <div class="center-item">4</div>
         </div>
-        <div class="item item-right"></div>
+        <div class="item item-right">
+            <div class="item header"></div>
+            <div class="item item1">1</div>
+            <div class="item item2">2</div>
+            <div class="item item3">3</div>
+            <div class="item item4">4</div>
+        </div>
     </div>
 </body>
 

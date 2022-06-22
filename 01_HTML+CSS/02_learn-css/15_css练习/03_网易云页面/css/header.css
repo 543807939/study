@@ -1,0 +1,114 @@
+header {
+  height: 70px;
+  border-bottom: 1px solid #333;
+  background-color: #242424;
+  box-sizing: border-box;
+}
+header .top-bar {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  /* align-items: center; */
+  height: 69px;
+  line-height: 69px;
+  /* background-color: #f08; */
+}
+header .top-bar .bar-left {
+  display: flex;
+}
+
+header .top-bar .bar-left h1 a {
+  display: inline-block;
+  width: 157px;
+  height: 100%;
+  padding-right: 20px;
+  background: url("../images/topbar.png") no-repeat;
+  /* background-position: 0 -19px; */
+  text-indent: -9999px;
+}
+header .top-bar .bar-left ul {
+  display: flex;
+}
+header .top-bar .bar-left ul .item {
+  position: relative;
+  display: block;
+  padding: 0 19px;
+  color: #ccc;
+}
+header .top-bar .bar-left ul .item:hover,
+header .top-bar .bar-left ul .item.active {
+  position: relative;
+  color: #fff;
+  background-color: #000;
+}
+header .top-bar .bar-left ul .item.active::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  width: 12px;
+  height: 7px;
+  background: url("../images/topbar.png") no-repeat;
+  background-position: -226px 0;
+  z-index: 1;
+}
+
+header .top-bar .bar-left ul .item .icon-hot {
+  position: absolute;
+  top: 10px;
+  right: -10px;
+  width: 26px;
+  height: 13px;
+  border-radius: 9px;
+  background: url("../images/topbar.png") no-repeat;
+  background-position: -192px 0;
+}
+
+.top-bar .bar-right {
+  display: flex;
+}
+.top-bar .bar-right > div {
+  margin-left: 19px;
+  font-size: 12px;
+}
+.top-bar .bar-right .search input {
+  width: 158px;
+  height: 32px;
+  text-indent: 2em;
+  border: none;
+  border-radius: 32px;
+  background: #fff url("../images/topbar.png") no-repeat;
+  background-position: 0 -99px;
+}
+.top-bar .bar-right .author a {
+  display: inline-block;
+  width: 106px;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  color: #ccc;
+  border: 1px solid #4f4f4f;
+  border-radius: 16px;
+}
+.top-bar .bar-right .author a:hover {
+  color: #fff;
+  border: 1px solid #ccc;
+}
+.top-bar .bar-right .login a {
+  margin-right: 20px;
+  color: #787878;
+}
+.top-bar .bar-right .login:hover a {
+  color: #999;
+}
+.top-bar .bar-right .login a:hover {
+  color: #787878;
+  text-decoration: underline;
+}
+
+header .top-nav {
+  height: 35px;
+  line-height: 35px;
+}
