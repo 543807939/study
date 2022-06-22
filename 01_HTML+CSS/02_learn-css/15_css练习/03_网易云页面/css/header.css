@@ -4,6 +4,7 @@ header {
   background-color: #242424;
   box-sizing: border-box;
 }
+
 header .top-bar {
   display: flex;
   flex-flow: row wrap;
@@ -13,6 +14,7 @@ header .top-bar {
   line-height: 69px;
   /* background-color: #f08; */
 }
+
 header .top-bar .bar-left {
   display: flex;
 }
@@ -26,21 +28,25 @@ header .top-bar .bar-left h1 a {
   /* background-position: 0 -19px; */
   text-indent: -9999px;
 }
+
 header .top-bar .bar-left ul {
   display: flex;
 }
+
 header .top-bar .bar-left ul .item {
   position: relative;
   display: block;
   padding: 0 19px;
   color: #ccc;
 }
+
 header .top-bar .bar-left ul .item:hover,
 header .top-bar .bar-left ul .item.active {
   position: relative;
   color: #fff;
   background-color: #000;
 }
+
 header .top-bar .bar-left ul .item.active::after {
   content: "";
   position: absolute;
@@ -69,10 +75,12 @@ header .top-bar .bar-left ul .item .icon-hot {
 .top-bar .bar-right {
   display: flex;
 }
-.top-bar .bar-right > div {
+
+.top-bar .bar-right>div {
   margin-left: 19px;
   font-size: 12px;
 }
+
 .top-bar .bar-right .search input {
   width: 158px;
   height: 32px;
@@ -82,6 +90,7 @@ header .top-bar .bar-left ul .item .icon-hot {
   background: #fff url("../images/topbar.png") no-repeat;
   background-position: 0 -99px;
 }
+
 .top-bar .bar-right .author a {
   display: inline-block;
   width: 106px;
@@ -92,17 +101,21 @@ header .top-bar .bar-left ul .item .icon-hot {
   border: 1px solid #4f4f4f;
   border-radius: 16px;
 }
+
 .top-bar .bar-right .author a:hover {
   color: #fff;
   border: 1px solid #ccc;
 }
+
 .top-bar .bar-right .login a {
   margin-right: 20px;
   color: #787878;
 }
+
 .top-bar .bar-right .login:hover a {
   color: #999;
 }
+
 .top-bar .bar-right .login a:hover {
   color: #787878;
   text-decoration: underline;
@@ -111,4 +124,34 @@ header .top-bar .bar-left ul .item .icon-hot {
 header .top-nav {
   height: 35px;
   line-height: 35px;
+  background-color: #c20c0c;
+}
+
+/* top-nav */
+.navbar ul {
+  display: flex;
+  margin-left: 188px;
+}
+
+.navbar ul .item {
+  /* padding: 7px 17px; */
+  display: block;
+  height: 100%;
+  color: #fff;
+}
+
+.navbar ul .item span {
+  display: inline-block;
+  height: 20px;
+  padding: 0px 7px;
+  margin: 0 17px;
+  line-height: 20px;
+  border-radius: 20px;
+  /* background-color: #fff; */
+  box-sizing: border-box;
+}
+
+.navbar ul .item span.active,
+.navbar ul .item span:hover {
+  background-color: #9b0909;
 }
