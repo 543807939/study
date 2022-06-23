@@ -1,0 +1,66 @@
+.banner {
+  height: 285px;
+  background-color: #f80;
+  background: url("../images/banner-bg.jpg") no-repeat center center/5000px;
+}
+
+.banner .area {
+  position: relative;
+  height: 100%;
+  background-color: #f08;
+}
+.banner .area .area-left {
+  width: 730px;
+  position: relative;
+}
+.banner .area .area-left .img-list {
+  display: flex;
+  overflow: hidden;
+}
+.banner .area .area-left .img-list li {
+  flex: 0 0 100%;
+}
+.banner .area .area-left .img-list .item {
+  display: block;
+}
+.banner .area .area-left .img-list .item img {
+  width: 100%;
+  vertical-align: top;
+}
+
+.banner .area .area-left .dots-list {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0px;
+  display: flex;
+  justify-content: center;
+}
+.banner .area .area-left .dots-list .item {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url("../images/banner.png") no-repeat 4px -343px;
+}
+.banner .area .area-left .dots-list .item:hover,
+.banner .area .area-left .dots-list .item.active {
+  background-position: -16px -343px;
+}
+.banner .area .area-right {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -1px;
+  width: 254px;
+  background: url("../images/download.png") no-repeat;
+  z-index: 1;
+}
+.banner .area .area-right a {
+  display: block;
+  width: 215px;
+  height: 56px;
+  margin: 186px auto 0;
+  text-indent: -9999px;
+  background: url("../images/download.png") 0 -289px;
+  overflow: hidden;
+}
