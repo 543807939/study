@@ -71,6 +71,7 @@
   color: #333;
 }
 .main .main-right .singer-list li .singer-info .desc {
+  width: 90%;
   margin-top: 8px;
   font-size: 12px;
   color: #666;
