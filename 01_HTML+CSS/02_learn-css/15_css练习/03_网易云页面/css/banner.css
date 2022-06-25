@@ -64,3 +64,6 @@
   background: url("../images/download.png") 0 -289px;
   overflow: hidden;
 }
+.banner .area .area-right a:hover{
+  background-position: 0 0;
+}
