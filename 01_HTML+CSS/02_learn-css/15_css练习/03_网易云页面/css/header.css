@@ -1,5 +1,5 @@
 header {
-  height: 70px;
+  height: 105px;
   border-bottom: 1px solid #333;
   background-color: #242424;
   box-sizing: border-box;
@@ -76,7 +76,7 @@ header .top-bar .bar-left ul .item .icon-hot {
   display: flex;
 }
 
-.top-bar .bar-right>div {
+.top-bar .bar-right > div {
   margin-left: 19px;
   font-size: 12px;
 }

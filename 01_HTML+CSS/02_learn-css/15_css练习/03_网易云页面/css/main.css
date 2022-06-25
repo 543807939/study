@@ -1,0 +1,81 @@
+.main {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  height: 500px;
+  border: 1px solid #d3d3d3;
+  border-width: 0 1px;
+  background: url("../images/wrap1.png") repeat-y;
+}
+/* 左侧区域 */
+.main .main-left {
+}
+/* 右侧区域 */
+.main .main-right {
+}
+.main .main-right .user-login {
+  width: 250px;
+  height: 126px;
+  padding: 16px 22.5px;
+  font-size: 12px;
+  line-height: 22px;
+  color: #666;
+  background: url("../images/index.png") no-repeat 0 0;
+  box-sizing: border-box;
+}
+.main .main-right .user-login a {
+  display: block;
+  width: 100px;
+  height: 31px;
+  margin: 0 auto;
+  line-height: 31px;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 1px #8a090b;
+  background: url("../images/index.png") no-repeat;
+  background-position: -110px -195px;
+}
+.main .main-right .user-login a:hover {
+  background-position: 0 -195px;
+}
+
+.main .main-right .settle-singer {
+  padding: 15px 20px 0;
+  box-sizing: border-box;
+}
+.main .main-right .singer-list {
+  padding: 0 20px;
+}
+.main .main-right .singer-list li {
+  margin-top: 14px;
+  background-color: #fafafa;
+}
+.main .main-right .singer-list li a {
+  display: flex;
+  width: 210px;
+  height: 62px;
+}
+.main .main-right .singer-list li .singer-avater {
+  width: 62px;
+}
+.main .main-right .singer-list li .singer-info {
+  width: 148px;
+  padding-left: 14px;
+  border: 1px solid #e9e9e9;
+  border-left: none;
+}
+.main .main-right .singer-list li .singer-info .name {
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+.main .main-right .singer-list li .singer-info .desc {
+  width: 90%;
+  margin-top: 8px;
+  font-size: 12px;
+  color: #666;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
