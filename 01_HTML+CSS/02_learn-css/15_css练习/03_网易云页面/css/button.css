@@ -1,0 +1,25 @@
+.btn {
+    display: inline-block;
+    height: 31px;
+    padding-right: 5px;
+    line-height: 31px;
+    text-align: center;
+    border-radius: 4px;
+    background: url('../images/button2.png');
+    background-position: right -100px;
+}
+
+.btn:hover {
+    background-position: right -346px;
+}
+
+.btn .btn-white-noicon {
+    display: block;
+    width: 100%;
+    background: url('../images/button2.png') no-repeat;
+    background-position: 0 -59px;
+}
+
+.btn .btn-white-noicon:hover {
+    background-position: 0 -305px;
+}

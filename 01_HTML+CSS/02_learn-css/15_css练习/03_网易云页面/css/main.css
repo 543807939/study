@@ -2,17 +2,399 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
-  height: 500px;
   border: 1px solid #d3d3d3;
   border-width: 0 1px;
   background: url("../images/wrap1.png") repeat-y;
 }
+
 /* 左侧区域 */
 .main .main-left {
+  flex: 1;
+  min-width: 0;
+  padding: 20px 20px 40px;
 }
+
+.main .recommend .recommend-list {
+  display: flex;
+  flex-flow: row wrap;
+  margin-top: 20px;
+  margin-left: -42px;
+}
+
+.main .recommend .recommend-list .item {
+  display: inline-block;
+  width: 140px;
+  height: 204px;
+  margin: 0 0 30px 42px;
+}
+
+.main .recommend .recommend-list .item .cover {
+  position: relative;
+  display: inline-block;
+}
+
+.main .recommend .recommend-list .item .cover img {
+  display: block;
+  width: 100%;
+}
+
+.main .recommend .recommend-list .item .cover .mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('../images/coverall.png') no-repeat 0 0;
+}
+
+.main .recommend .recommend-list .item .cover .icon-crown {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  background: url('../images/icon2.png') no-repeat -135px -220px;
+}
+
+.main .recommend .recommend-list .item .cover .bottom {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 27px;
+  padding: 0 10px;
+  line-height: 27px;
+  color: #ccc;
+  font-size: 12px;
+  background: url('../images/coverall.png') 0 -537px;
+  z-index: 1;
+}
+
+.main .recommend .recommend-list .item .cover .bottom .icon-headset {
+  display: inline-block;
+  width: 14px;
+  height: 11px;
+  background: url('../images/iconall.png') no-repeat 0 -24px;
+}
+
+.main .recommend .recommend-list .item .cover .bottom .icon-play {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 10px;
+  width: 16px;
+  height: 17px;
+  margin: auto;
+  background: url('../images/iconall.png') no-repeat;
+}
+
+.main .recommend .recommend-list .item .cover .bottom .icon-play:hover {
+  background-position: 0 -60px;
+}
+
+.main .recommend .recommend-list .item .desc {
+  font-size: 14px;
+  color: #000;
+}
+
+.main .recommend .recommend-list .item .desc:hover {
+  text-decoration: underline;
+}
+
+.main .recommend .recommend-list .item .desc i {
+  display: inline-block;
+  width: 35px;
+  height: 15px;
+  vertical-align: middle;
+  background: url('../images/icon.png') no-repeat -31px -658px;
+}
+
+.main .new .new-container {
+  margin: 20px 0 37px;
+  border: 1px solid #d3d3d3;
+}
+
+.main .new .new-container .inner {
+  position: relative;
+  height: 184px;
+  background: #f5f5f5;
+  border: 1px solid #fff;
+}
+
+.main .new .new-container .inner .roller {
+  display: flex;
+  margin: 0 16px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.main .new .new-container .inner .roller ul {
+  display: flex;
+  flex-shrink: 0;
+  width: 100%;
+  margin-top: 28px;
+}
+
+.main .new .new-container .inner .roller ul .item {
+  width: 118px;
+  height: 150px;
+  margin-left: 11px;
+  background: url('../images/index.png') no-repeat -260px 100px;
+}
+
+.main .new .new-container .inner .roller ul .item .cover {
+  position: relative;
+  display: block;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 7px;
+}
+
+.main .new-container .inner .roller .item .cover .icon-play {
+  position: absolute;
+  display: none;
+  right: 10px;
+  bottom: 5px;
+  width: 22px;
+  height: 22px;
+  background: url('../images/iconall.png') no-repeat 0 -85px;
+}
+
+.main .new-container .inner .roller .item .cover:hover>.icon-play {
+  display: block;
+}
+
+.main .new .new-container .inner .roller ul .item .cover img {
+  width: 100%;
+}
+
+.main .new .new-container .inner .roller ul .item .cover .mask {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 118px;
+  height: 100px;
+  background: url('../images/coverall.png') no-repeat 0 -570px;
+}
+
+.main .new .new-container .inner .roller ul .item p {
+  font-size: 12px;
+}
+
+.main .new .new-container .inner .roller ul .item p:hover {
+  text-decoration: underline;
+}
+
+.main .new .new-container .inner .roller ul .item .name {
+  color: #000;
+}
+
+.main .new .new-container .inner .roller ul .item .author {
+  color: #666;
+}
+
+.main .new .new-container .inner .control {
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  top: 71px;
+  text-indent: -9999px;
+  background: url('../images/index.png') no-repeat;
+  overflow: hidden;
+}
+
+.main .new .new-container .inner .control.control-left {
+  left: 4px;
+  background-position: -260px -75px;
+}
+
+.main .new .new-container .inner .control.control-left:hover {
+  background-position: -280px -75px;
+}
+
+.main .new .new-container .inner .control.control-right {
+  right: 4px;
+  background-position: -300px -75px;
+}
+
+.main .new .new-container .inner .control.control-right:hover {
+  background-position: -320px -75px;
+}
+
+/* 左侧排行榜 */
+.main .ranking {}
+
+.main .ranking .ranking-container {
+  display: flex;
+  height: 472px;
+  margin-top: 20px;
+  background: url('../images/index_bill.png') no-repeat;
+}
+
+.main .ranking .ranking-container .ranking-item {
+  width: 230px;
+}
+
+.main .ranking-item dt {
+  display: flex;
+  width: 230px;
+  height: 120px;
+  padding: 20px 0 0 19px;
+  box-sizing: border-box;
+}
+
+.main .ranking-item dt .cover {
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.main .ranking-item dt .cover img {
+  width: 100%;
+}
+
+.main .ranking-item dt .cover .mask {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url('../images/coverall.png') -145px -57px;
+}
+
+.main .ranking-item dt .title {
+  margin: 6px 0 0 10px;
+}
+
+.main .ranking-item dt .title a {
+  font-size: 14px;
+  color: #333;
+  font-weight: 600;
+}
+
+.main .ranking-item dt .title .icon {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  margin: 10px 10px 0 0;
+  text-indent: -9999px;
+  overflow: hidden;
+  background: url('../images/index.png') no-repeat;
+}
+
+.main .ranking-item dt .title .icon.icon-play {
+  background-position: -267px -205px;
+}
+
+.main .ranking-item dt .title .icon.icon-play:hover {
+  background-position: -267px -235px;
+}
+
+.main .ranking-item dt .title .icon.icon-collection {
+  background-position: -300px -205px;
+}
+
+.main .ranking-item dt .title .icon.icon-collection:hover {
+  background-position: -300px -235px;
+}
+
+.main .ranking-item ol {
+  margin-left: 15px;
+}
+
+.main .ranking-item li {
+  position: relative;
+  height: 32px;
+  line-height: 32px;
+}
+
+.main .ranking-item li span {
+  display: inline-block;
+  width: 35px;
+  text-align: center;
+  vertical-align: top;
+}
+
+.main .ranking-item li:nth-child(-n+3) span {
+  color: #c10d0c;
+}
+
+.main .ranking-item .more {
+  padding-right: 32px;
+  line-height: 32px;
+  text-align: right;
+}
+
+.main .ranking-item .more a:hover {
+  text-decoration: underline;
+}
+
+.main .ranking-item li .name {
+  display: inline-block;
+  width: 170px;
+  font-size: 12px;
+  color: #000;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.main .ranking-item li:hover .name {
+  width: 89px;
+
+  text-decoration: underline;
+}
+
+.main .ranking-item li:hover .oper {
+  display: block;
+}
+
+.main .ranking-item li .oper {
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  height: 17px;
+  margin: auto 0;
+  font-size: 0;
+}
+
+.main .ranking-item li .oper a {
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  vertical-align: top;
+  margin-right: 10px;
+  background: url('../images/index.png') no-repeat;
+}
+
+.main .ranking-item li .oper .icon-play {
+  background-position: -267px -268px;
+}
+
+.main .ranking-item li .oper .icon-play:hover {
+  background-position: -267px -288px;
+}
+
+.main .ranking-item li .oper .icon-add-to-list {
+  background: url('../images/icon.png') no-repeat;
+  background-position: 0 -698px;
+}
+
+.main .ranking-item li .oper .icon-add-to-list:hover {
+  background-position: -22px -698px;
+}
+
+.main .ranking-item li .oper .icon-collection {
+  background-position: -297px -268px
+}
+
+.main .ranking-item li .oper .icon-collection:hover {
+  background-position: -297px -288px;
+}
+
 /* 右侧区域 */
-.main .main-right {
-}
 .main .main-right .user-login {
   width: 250px;
   height: 126px;
@@ -23,6 +405,7 @@
   background: url("../images/index.png") no-repeat 0 0;
   box-sizing: border-box;
 }
+
 .main .main-right .user-login a {
   display: block;
   width: 100px;
@@ -35,46 +418,97 @@
   background: url("../images/index.png") no-repeat;
   background-position: -110px -195px;
 }
+
 .main .main-right .user-login a:hover {
   background-position: 0 -195px;
 }
 
-.main .main-right .settle-singer {
+.main .main-right .right-singer {
   padding: 15px 20px 0;
   box-sizing: border-box;
 }
-.main .main-right .singer-list {
+
+.main .main-right .right-list {
   padding: 0 20px;
+  margin-bottom: 20px;
 }
-.main .main-right .singer-list li {
+
+.main .main-right .right-list li {
   margin-top: 14px;
   background-color: #fafafa;
 }
-.main .main-right .singer-list li a {
+
+.main .main-right .right-list li a {
   display: flex;
   width: 210px;
   height: 62px;
+
 }
-.main .main-right .singer-list li .singer-avater {
+
+.main .main-right .right-list li .singer-avater {
   width: 62px;
 }
-.main .main-right .singer-list li .singer-info {
-  width: 148px;
+
+.main .main-right .right-list li .singer-info {
+  flex: 1;
+  width: 0;
   padding-left: 14px;
   border: 1px solid #e9e9e9;
   border-left: none;
+  box-sizing: border-box;
 }
-.main .main-right .singer-list li .singer-info .name {
+
+.main .main-right .right-list li .singer-info .name {
   margin-top: 8px;
   font-size: 14px;
   font-weight: 600;
   color: #333;
 }
-.main .main-right .singer-list li .singer-info .desc {
+
+.main .main-right .right-list li .singer-info .desc {
   width: 90%;
   margin-top: 8px;
   font-size: 12px;
   color: #666;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.main .main-right .add-us {
+  margin-left: 20px;
+}
+
+.main .main-right .add-us .btn i {
+  width: 205px;
+}
+
+.main .main-right .hot-list {
+  padding: 20px;
+}
+
+.main .main-right .hot-list a {
+  display: flex;
+  width: 210px;
+  margin-bottom: 10px;
+}
+
+.main .main-right .hot-list .hot-avater {
+  width: 40px;
+  margin-right: 10px;
+}
+
+.main .main-right .hot-list .hot-info {
+
+  flex: 1;
+  width: 0;
+}
+
+.main .main-right .hot-list .hot-info .name {
+  color: #000;
+}
+
+.main .main-right .hot-list .hot-info .desc {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;

@@ -1,0 +1,124 @@
+footer {
+    height: 173px;
+    padding-top: 15px;
+    border-top: 1px solid #d3d3d3;
+    background: #f2f2f2;
+    box-sizing: border-box;
+}
+
+footer .wrapper-02 {
+    position: relative;
+}
+
+footer .links {
+    display: flex;
+}
+
+footer .links a {
+    color: #999;
+    font-size: 12px;
+}
+
+footer .links .line {
+    margin: 0 4px 0 2px;
+}
+
+footer .msg {
+    color: #666;
+    line-height: 24px;
+    font-size: 12px;
+}
+
+footer .msg span {
+    margin-right: 14px;
+}
+
+footer .msg a {
+    margin-right: 10px;
+    color: #666;
+}
+
+footer .msg a:hover {
+    text-decoration: underline;
+}
+
+footer .msg .icon {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    vertical-align: -2px;
+    background: url('../images/police.png') no-repeat center/cover;
+}
+
+footer .enter {
+    position: absolute;
+    right: 0;
+    top: 17px;
+    display: flex;
+}
+
+footer .enter dl {
+    margin-left: 30px;
+}
+
+footer .enter dt {
+    text-align: center;
+}
+
+footer .enter dt .logo {
+    display: inline-block;
+    width: 50px;
+    height: 45px;
+    background: url('../images/foot_enter_new.png') no-repeat;
+    background-size: 110px 552px;
+    overflow: hidden;
+}
+
+footer .enter dt .logo.logo-amped {
+    background-position: -63px -456px;
+}
+
+footer .enter dt .logo.logo-auth {
+    background-position: -63px -101px;
+}
+
+footer .enter dt .logo.logo-musician {
+    background-position: -0 -0;
+}
+
+footer .enter dt .logo.logo-reward {
+    background-position: -60px -50px;
+}
+
+footer .enter dt .logo.logo-cash {
+    background-position: 0 -101px;
+}
+
+footer .enter dd .icon {
+    display: inline-block;
+    width: 52px;
+    height: 14px;
+    background: url('../images/foot_enter_tt.png') no-repeat;
+    background-size: 180px 139px;
+}
+
+footer .enter dd .icon.tt-amped {
+    width: 72px;
+    background-position: 0 -105px;
+}
+
+footer .enter dd .icon.tt-auth {
+    background-position: -1px -87px;
+}
+
+footer .enter dd .icon.tt-musician {
+    background-position: -0 4px;
+}
+
+footer .enter dd .icon.tt-reward {
+    background-position: 0 -50px;
+}
+
+footer .enter dd .icon.tt-cash {
+    background-position: -1px -68px;
+}

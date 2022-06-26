@@ -4,11 +4,66 @@
   border-bottom: 1px solid #ccc;
   padding-bottom: 4px;
 }
+
 .header-01 .title {
   font-size: 12px;
+  font-weight: 600;
   color: #333;
 }
+
 .header-01 .more {
   font-size: 12px;
   color: #666;
+}
+
+.header-02 {
+  display: flex;
+  justify-content: space-between;
+  height: 35px;
+  padding: 0 10px 0 34px;
+  line-height: 35px;
+  border-bottom: 2px solid #C10D0C;
+  background: url('../images/index.png') no-repeat -225px -156px;
+  box-sizing: border-box;
+}
+
+.header-02 .title {
+  display: flex;
+}
+
+.header-02 .title span {
+  font-size: 20px;
+  color: #333;
+}
+
+.header-02 .title .tab {
+  display: flex;
+  margin-left: 20px;
+  font-size: 12px;
+  color: #666;
+}
+
+.header-02 .title .tab .item:hover {
+  text-decoration: underline;
+}
+
+.header-02 .title .tab .line {
+  margin: 0 10px;
+}
+
+.header-02 .more {
+  font-size: 12px;
+  color: #666;
+}
+
+.header-02 .more:hover {
+  text-decoration: underline;
+}
+
+.header-02 .more::after {
+  content: '';
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: url('../images/index.png') no-repeat 0 -240px;
 }

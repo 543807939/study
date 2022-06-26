@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            height: 400px;
+            background-color: #f08;
+        }
+
+        .inner-box {
+            display: inline-block;
+            width: 200px;
+            height: 200px;
+            vertical-align: top;
+            background-color: #08f;
+            transform: translate(50px);
+        }
+    </style>
+</head>
+
+<body>
+    <p>
+        只能转换由盒模型定位的元素。根据经验，如果元素具有display: block，则由盒模型定位元素。
+    </p>
+    <p>
+        translate元素在x轴或者y轴上进行平移,元素仍然占据原来的空间.
+    </p>
+    <div class="box">
+        <div class="inner-box"></div>
+        <span style="position: relative; z-index: 999;">123</span>
+    </div>
+</body>
+
+</html>

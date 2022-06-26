@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>
+        水平居中的方法: <br>
+        1. 如果是行内元素,给它的父元素设置text-align:center; <br>
+        2. 如果是块级元素,给它自己设置 margin: 0 auto; <br>
+        3. 绝对定位, 给父元素设置position为非static,自身设置position为absolute;设置一个宽度,left:0;right:0;margin: 0 auto; <br>
+        4. 绝对定位, 给父元素设置position为非static,自身设置position为absolute;设置自身left:50%;transform:translateX(-50%); <br>
+        5. flex布局,设置justify-content:center; <br>
+    </p>
+    <p>
+        垂直居中的方法: <br>
+        1. 绝对定位, 给父元素设置position为非static,自身设置position为absolute;设置一个宽度,top:0;bottom:0;margin: auto 0; <br>
+        2. flex布局,设置align-item:center; <br>
+        3. 绝对定位, 给父元素设置position为非static,自身设置position为absolute;设置自身top:50%;transform:translateY(-50%); <br>
+    </p>
+</body>
+
+</html>

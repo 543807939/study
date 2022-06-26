@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            height: 400px;
+            background-color: #f08;
+        }
+
+        .inner-box {
+            display: inline-block;
+            width: 200px;
+            height: 200px;
+            vertical-align: top;
+            background-color: #08f;
+            transform: translate(50%);
+        }
+    </style>
+</head>
+
+<body>
+    <p>
+        translate的单位可以是固定的像素. <br>
+        也可以是百分比,百分比是相对自身的宽度或者高度,而不是父盒子
+    </p>
+    <div class="box">
+        <div class="inner-box"></div>
+        <span style="position: relative; z-index: 999;">123</span>
+    </div>
+</body>
+
+</html>

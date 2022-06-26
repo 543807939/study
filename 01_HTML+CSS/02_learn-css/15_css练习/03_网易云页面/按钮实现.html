@@ -7,46 +7,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        a {
-            position: relative;
+        .btn {
             display: inline-block;
-            width: 205px;
             height: 31px;
             padding-right: 5px;
             line-height: 31px;
             text-align: center;
-            background: url('./images/button2.png');
+            background: url('./images/button2.png') no-repeat;
             background-position: right -100px;
         }
 
-        i {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            width: 205px;
-            font-style: normal;
+        .btn .btn-inner {
+            display: inline-block;
+            width: 170px;
+            padding: 0 15px 0 20px;
             background: url('./images/button2.png') no-repeat;
             background-position: 0 -59px;
-            z-index: 999;
         }
 
-        .box {
-            width: 200px;
-            height: 200px;
-            padding: 200px;
-            background-image: url('./images/download.png');
+        .btn .fav {
+            background-position: 0 -977px;
         }
     </style>
 </head>
 
 <body>
-    <a href="#">
-        <i>申请成为网易音乐人</i>
+    <a href="#" class="btn">
+        <i class="btn-inner">申请成为网易音乐人</i>
     </a>
-    <div class="box">
-
-    </div>
+    <a href="#" class="btn">
+        <i style="width: 120px" class="btn-inner">申请网易音乐人</i>
+    </a>
+    <a href="#" class="btn">
+        <i class="btn-inner fav">(3941573)</i>
+    </a>
 </body>
 
 </html>
