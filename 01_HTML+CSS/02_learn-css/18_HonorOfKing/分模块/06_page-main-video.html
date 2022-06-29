@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <style>
+        .item {
+            width: 211px;
+            height: 175px;
+            margin: 100px auto;
+        }
+
+        .item a {
+            display: block;
+        }
+
+        .item .cover {
+            position: relative;
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .item .cover img {
+            width: 100%;
+        }
+
+        .item .cover .info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: space-between;
+            height: 22px;
+            padding: 0 10px;
+            line-height: 22px;
+            color: #fff;
+            font-size: 12px;
+            background: rgba(0, 0, 0, .6);
+        }
+
+        .item .cover .info .icon-play {
+            padding-left: 17px;
+            background: url('./images/index.png') no-repeat -256px -59px;
+        }
+
+        .item .cover .mask {
+            display: none;
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            display: flex;
+            background: rgba(0, 0, 0, .6);
+            transition: opacity .3s linear;
+        }
+
+        .item .cover .mask .icon-mask-play {
+            width: 40px;
+            height: 40px;
+            margin: auto;
+            background: url('./images/index.png') no-repeat -192px -64px;
+        }
+
+        .item .des {
+            margin-top: 10px;
+            color: #333;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
+
+        .item:hover .mask {
+            display: flex;
+            animation: itemCoverAnim .3s linear forwards;
+        }
+
+        @keyframes itemCoverAnim {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="item">
+        <a href="#">
+            <div class="cover">
+                <img src="./images/video-01.jpg">
+                <div class="info">
+                    <div class="icon-play">
+                        6393
+                    </div>
+                    <div class="date">
+                        三天以前
+                    </div>
+                </div>
+                <div class="mask">
+                    <div class="icon-mask-play"></div>
+                </div>
+            </div>
+            <div class="des">
+                法球类戈娅 | 一秒7伤全网最详细出装解析、技能分析教学
+            </div>
+        </a>
+    </div>
+</body>
+
+</html>

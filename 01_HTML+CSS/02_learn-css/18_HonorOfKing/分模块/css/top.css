@@ -1,0 +1,85 @@
+@charset "UTF-8";
+
+.top {
+    border-bottom: 1px solid #f5f5f5;
+}
+
+.top .area {
+    display: flex;
+    justify-content: space-between;
+    height: 41px;
+    line-height: 41px;
+    /* background-color: #f08; */
+}
+
+.top .left-area {
+    display: flex;
+}
+
+.top .left-area .top-logo {
+    width: 150px;
+    background: url('../images/logo.png') no-repeat center center;
+}
+
+.top .left-area .top-logo .top-logo-link {
+    display: block;
+    height: 100%;
+    text-indent: -9999px;
+    overflow: hidden;
+}
+
+.top .left-area .recommend {
+    width: 230px;
+}
+
+.top .right-area {
+    display: flex;
+}
+
+.top-icon::before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    bottom: 0;
+    display: block;
+    width: 30px;
+    background: url('../images/title_sprite.png') no-repeat;
+}
+
+.top .right-area a {
+    display: block;
+}
+
+.top .right-area .grow-protect {
+    margin-right: 20px;
+    color: #464646;
+}
+
+.top .right-area .grow-protect a {
+    position: relative;
+}
+
+.top .right-area .grow-protect a:hover {
+    color: #ff4e00;
+}
+
+.top .right-area .grow-protect a::before {
+    left: -30px;
+    background-position: -30px 0;
+}
+
+.top .right-area .ranking {
+    color: #333;
+}
+
+.top .right-area .ranking a {
+    position: relative;
+    padding-right: 30px;
+}
+
+.top .right-area .ranking a::before {
+    opacity: .1;
+    right: 0;
+    background-position: 0 0;
+    transform: rotate(90deg);
+}

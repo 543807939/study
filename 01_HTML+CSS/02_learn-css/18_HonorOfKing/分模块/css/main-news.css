@@ -1,0 +1,144 @@
+.main {}
+
+.main-news {
+    display: flex;
+    height: 342px;
+    background: url('../images/news_bg.png') no-repeat;
+}
+
+/* 轮播图部分 */
+.main-news .banner {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 605px;
+    color: #b1b2be;
+    background-color: #000;
+}
+
+.main-news .banner .image-list {
+    display: flex;
+    overflow: hidden;
+}
+
+.main-news .banner .image-list .item {
+    width: 100%;
+    flex-shrink: 0;
+}
+
+.main-news .banner a {
+    display: block;
+}
+
+.main-news .banner .image-list a img {
+    width: 100%;
+}
+
+.main-news .banner .title-list {
+    display: flex;
+    height: 44px;
+    line-height: 44px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.main-news .banner .title-list .item {
+    flex: 1;
+}
+
+.main-news .banner .title-list .item:hover {
+    background: rgba(255, 255, 255, 0.15);
+    color: #f3c258;
+}
+
+/* 新闻部分 */
+.main-news .news {
+    flex: 1;
+    padding: 0 17px;
+    overflow: hidden;
+}
+
+.main-news .news .title-list {
+    display: flex;
+    text-align: center;
+    color: #b8b9c5;
+    border-bottom: 1px solid #000;
+}
+
+.main-news .news .title-list li {
+    flex: 1 0;
+    height: 48px;
+    box-sizing: border-box;
+    line-height: 45px;
+    transition: border .15s linear;
+}
+
+.main-news .news .title-list li:nth-child(-n+5):hover {
+    color: #f3c258;
+    border-bottom: 3px solid #f3c258;
+}
+
+.main-news .news .title-list li a {
+    display: block;
+}
+
+.main-news .news .notice {
+    height: 36px;
+    margin-top: 18px;
+    padding: 0 15px;
+    line-height: 36px;
+    background-color: #414046;
+}
+
+.main-news .news .notice a {
+    display: block;
+    color: #f3c258;
+    font-size: 18px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.main-news .news .news-list .item {
+    display: flex;
+    margin-top: 7px;
+    line-height: 32px;
+}
+
+.main-news .news .news-list .item .des {
+    display: block;
+    flex: 1 0;
+    padding-right: 10px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.main-news .news .news-list .item span {
+    width: 34px;
+    font-size: 12px;
+}
+
+/* 下载部分 */
+.main-news .download {
+    width: 236px;
+    background-color: #0f8;
+}
+
+.main-news .download a {
+    display: block;
+    background: url('../images/index.png') no-repeat;
+}
+
+.main-news .download a.download-btn {
+    height: 128px;
+    background-position: 0 -219px;
+}
+
+.main-news .download a.guard-btn {
+    height: 106px;
+    background-position: 0 -350px;
+}
+
+.main-news .download a.experience-btn {
+    height: 108px;
+    background-position: 0 -461px;
+}

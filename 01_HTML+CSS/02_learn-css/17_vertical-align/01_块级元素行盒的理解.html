@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>
+        行盒的作用是将当前行所有的内容包裹起来
+    </p>
+</body>
+
+<script>
+    async function a() {
+        let c = 0
+        let b = new Promise(r => {
+            setTimeout(() => {
+                let n = 1
+                r(n)
+            }, 0);
+        })
+        console.log(`c1:${c}`);
+        await b.then(s => {
+            c = s
+        })
+        console.log(`c:${c}`);
+        return c
+    }
+    let w = a()
+    console.dir(`w:${w}`);
+</script>
+
+</html>
