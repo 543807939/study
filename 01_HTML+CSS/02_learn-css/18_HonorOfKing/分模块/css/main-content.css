@@ -11,7 +11,6 @@
 .main-content .right-container {
     width: 295px;
     height: 528px;
-    background-color: #0f8;
 }
 
 .main-content .match-center .match-news {
@@ -86,4 +85,74 @@
 
 .main-content .match-news .match-news-list .item a:hover {
     text-decoration: underline;
+}
+
+.main-content .right-container .new-hero {
+    margin-bottom: 10px;
+}
+
+.main-content .right-container .new-hero a {
+    display: block;
+}
+
+.main-content .right-container .new-hero a img {
+    width: 100%;
+}
+
+.main-content .right-container .new-hero .hero-bottom {
+    padding: 10px 15px;
+    font-size: 12px;
+    color: #999;
+    border: 1px solid #e5e5e5;
+    border-radius: 2px;
+}
+
+.main-content .right-container .new-hero .hero-bottom .title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+}
+
+
+.main-content .right-container .hero-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-content .right-container .hero-list .item a {
+    position: relative;
+    display: block;
+    width: 68px;
+    border-radius: 2px;
+}
+
+.main-content .right-container .hero-list .item .mask {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f3c258;
+    writing-mode: vertical-rl;
+    background: rgba(0, 0, 0, .88);
+}
+
+.main-content .right-container .hero-list .item .mask:hover {
+    animation: maskShowAnim .3s linear forwards;
+}
+
+@keyframes maskShowAnim {
+    from {
+        /* display: none; */
+        opacity: 0;
+    }
+
+    to {
+        /* display: block; */
+        opacity: 1;
+    }
 }

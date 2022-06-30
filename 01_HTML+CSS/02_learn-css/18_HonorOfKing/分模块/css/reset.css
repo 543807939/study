@@ -30,6 +30,12 @@ a {
     outline: none;
 }
 
+i,
+em,
+strong {
+    font-style: normal;
+}
+
 h1,
 h2,
 h3,

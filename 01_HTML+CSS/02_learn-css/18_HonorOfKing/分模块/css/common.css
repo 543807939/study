@@ -39,12 +39,12 @@
     border-color: #f4be19;
 }
 
-.news_type_match_KPL::before {
-    content: 'KPL';
+.news_type_match {
     width: 48px;
     height: 19px;
-    line-height: 19px;
     margin-right: 12px;
+    text-align: center;
+    line-height: 19px;
     color: #999;
     border: 2px solid #e3e3e3;
     border-radius: 10px;
@@ -71,6 +71,13 @@
 
 .header_left .title.title-match {
     background-position: 0 -177px;
+}
+
+.header_left .title.title-hero {
+    background-position: 0px -137px;
+}
+.header_left .title.title-schedule {
+    background-position: -157px -107px;;
 }
 
 .header_right {
