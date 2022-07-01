@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="box" data-name="张三" data-age="14" data-height="188">
+        html5新增了data-*全局属性 <br>
+        可以通过dataset来获取到这么定义的元素属性 <br>
+    </div>
+    <script>
+        const box = document.querySelector('.box')
+        console.log(box.dataset);
+        console.log(box.dataset.name);
+    </script>
+</body>
+
+</html>

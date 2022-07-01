@@ -1,0 +1,14 @@
+.page-main {
+    position: relative;
+    background: url('../images/main-cover.jpg') no-repeat center top;
+}
+
+.page-main .kv-link {
+    position: absolute;
+    top: 90px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 1200px;
+    height: 440px;
+}

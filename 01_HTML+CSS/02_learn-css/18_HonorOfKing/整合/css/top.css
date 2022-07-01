@@ -1,0 +1,243 @@
+@charset "UTF-8";
+
+.top {
+    border-bottom: 1px solid #f5f5f5;
+}
+
+.top .area {
+    display: flex;
+    justify-content: space-between;
+    height: 41px;
+    line-height: 41px;
+    /* background-color: #f08; */
+}
+
+.top .left-area {
+    display: flex;
+    position: relative;
+}
+
+.top .left-area .top-logo {
+    position: relative;
+    width: 150px;
+    background: url('../images/logo.png') no-repeat center center;
+    z-index: 999;
+}
+
+.top .left-area .top-logo .top-logo-link {
+    display: block;
+    height: 100%;
+    text-indent: -9999px;
+    overflow: hidden;
+}
+
+.top .left-area .recommend {
+    width: 230px;
+}
+
+.top .left-area .recommend:hover .recommend-ad {
+    display: block;
+}
+
+.top .left-area .recommend .recommend-ad {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+    z-index: 10;
+}
+
+.top .right-area {
+    display: flex;
+}
+
+.top-icon::before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    bottom: 0;
+    display: block;
+    width: 30px;
+    background: url('../images/title_sprite.png') no-repeat;
+}
+
+.top .right-area a {
+    display: block;
+}
+
+.top .right-area .grow-protect {
+    margin-right: 20px;
+    color: #464646;
+}
+
+.top .right-area .grow-protect a {
+    position: relative;
+}
+
+.top .right-area .grow-protect a:hover {
+    color: #ff4e00;
+}
+
+.top .right-area .grow-protect a::before {
+    left: -30px;
+    background-position: -30px 0;
+}
+
+.top .right-area .ranking {
+    position: relative;
+    color: #333;
+    z-index: 9;
+}
+
+.top .right-area .ranking>a {
+    position: relative;
+    padding-right: 30px;
+}
+
+.top .right-area .ranking a::before {
+    opacity: .1;
+    right: 0;
+    background-position: 0 0;
+    transform: rotate(90deg);
+}
+
+.top .right-area .ranking:hover .dropdown {
+    display: flex;
+    opacity: 1;
+}
+
+.top .right-area .ranking .dropdown {
+    position: absolute;
+    right: 0;
+    display: none;
+    opacity: 0;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: 707px;
+    height: 580px;
+    padding-left: 35px;
+    font-size: 12px;
+    color: #333;
+    background: #fafafa;
+    animation: opacotyAnim .3s linear forwards;
+}
+
+.top .right-area .ranking .dropdown dl {
+    width: 224px;
+}
+
+.top .right-area .ranking .dropdown dl dt {
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 40px;
+}
+
+.top .right-area .ranking .dropdown dl dt a {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 35px;
+}
+
+.top .right-area .ranking .dropdown dl dt a::after {
+    content: '';
+    display: inline-block;
+    opacity: .1;
+    width: 30px;
+    height: 30px;
+    background: url('../images/title_sprite.png') no-repeat -3px 6px;
+    vertical-align: middle;
+}
+
+.top .right-area .ranking .dropdown dl .item {
+    margin-bottom: 20px;
+    line-height: 16px;
+}
+
+.top .right-area .ranking .dropdown dl .item.active .cover,
+.top .right-area .ranking .dropdown dl .item:hover .cover {
+    display: block;
+}
+
+.top .right-area .ranking .dropdown dl .item.active .game-name,
+.top .right-area .ranking .dropdown dl .item:hover .game-name {
+    display: none;
+}
+
+.top .right-area .ranking .dropdown dl .item a {
+    position: relative;
+    display: block;
+}
+
+.top .right-area .ranking .dropdown dl .item .order {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    text-align: center;
+    line-height: 16px;
+    color: #fff;
+    background-color: #ccc;
+    z-index: 1;
+}
+
+.top .right-area .ranking .dropdown dl .item .game-name {
+    margin-left: 25px;
+}
+
+.top .right-area .ranking .dropdown dl .item:nth-child(-n+3) .order {
+    background-color: #c62828;
+}
+
+.top .right-area .ranking .dropdown dl .item .cover {
+    position: relative;
+    display: none;
+}
+
+.top .right-area .ranking .dropdown dl .item .cover img {
+    width: 100%;
+}
+
+.top .right-area .ranking .dropdown dl .item .cover .bottom {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    color: #fff;
+    background: rgba(0, 0, 0, .7);
+}
+
+.top .right-area .ranking .dropdown dl .item .cover .bottom>div {
+    flex: 1;
+}
+
+.top .right-area .ranking .dropdown dl .item .cover .bottom .download {
+    display: flex;
+    justify-content: center;
+}
+
+.top .right-area .ranking .dropdown dl .item .cover .bottom .download i {
+    display: none;
+    flex: 1;
+}
+
+.top-icon.apple::before {
+    background-position: -54px -5px;
+}
+
+.top-icon.android::before {
+    background-position: -84px -5px;
+}
+
+.top .right-area .ranking .dropdown dl:nth-child(n+3) .item .cover .bottom:hover .download i {
+    display: block;
+}
+
+.top .right-area .ranking .dropdown dl:nth-child(n+3) .item .cover .bottom:hover .download span {
+    display: none;
+}

@@ -87,6 +87,10 @@
     text-decoration: underline;
 }
 
+.main-content .right-container .hero {
+    height: 528px;
+}
+
 .main-content .right-container .new-hero {
     margin-bottom: 10px;
 }
@@ -155,4 +159,59 @@
         /* display: block; */
         opacity: 1;
     }
+}
+
+.main-content .right-container .schedule .header_right a.buy_ticket {
+    display: block;
+    height: 22px;
+    box-sizing: border-box;
+    padding: 0 10px 0 30px;
+    margin-right: 10px;
+    line-height: 22px;
+    color: #323235;
+    border: 1px solid #f3c258;
+    border-radius: 3px;
+    background: url('../images/index.png') no-repeat -244px -85px;
+}
+
+.main-content .right-container .schedule table {
+    width: 100%;
+    margin-bottom: 21px;
+    border-collapse: collapse;
+}
+
+.main-content .right-container .schedule table th {
+    height: 29px;
+    line-height: 29px;
+    text-align: center;
+    color: #999;
+    background: #f5f5f5;
+}
+
+.main-content .right-container .schedule table tr>td:nth-child(3) {
+    color: #f3c258;
+    font-size: 14px;
+}
+
+.main-content .right-container .schedule table td {
+    height: 67px;
+    text-align: center;
+    color: #333;
+    font-size: 12px;
+    line-height: 24px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.main-content .right-container .schedule table td img {
+    display: block;
+    width: 25px;
+    margin: 0 auto;
+}
+
+.main-content .right-container .schedule .match-schedule-cover a {
+    display: block;
+}
+
+.main-content .right-container .schedule .match-schedule-cover a img {
+    width: 100%;
 }

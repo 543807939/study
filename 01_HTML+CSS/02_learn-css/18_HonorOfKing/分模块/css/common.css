@@ -66,32 +66,34 @@
 
 .header_left .title {
     padding-left: 30px;
-    background: url('../images/index.png') no-repeat 0px -98px;
+    background: url('../images/index.png') no-repeat 0px -101px;
 }
 
 .header_left .title.title-match {
-    background-position: 0 -177px;
+    background-position: 0 -180px;
 }
 
 .header_left .title.title-hero {
-    background-position: 0px -137px;
+    background-position: -0px -140px;
 }
 .header_left .title.title-schedule {
-    background-position: -157px -107px;;
+    background-position: -157px -102px
 }
 
 .header_right {
+    display: flex;
     font-size: 14px;
     color: #999;
 }
 
-.header_right a {
+
+.header_right a.more {
     display: block;
     padding-left: 20px;
     background: url('../images/index.png') no-repeat -252px 3px;
 }
 
-.header_right a:hover {
+.header_right a.more:hover {
     color: #f3c258;
 }
 
@@ -151,4 +153,14 @@
     border-color: #f3c258;
     background: #f3c258;
     color: #fff;
+}
+
+@keyframes opacotyAnim {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }

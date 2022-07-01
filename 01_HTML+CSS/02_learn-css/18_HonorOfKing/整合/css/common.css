@@ -1,0 +1,171 @@
+@charset "UTF-8";
+
+body {
+    min-width: 1300px;
+}
+
+.top_wrapper {
+    width: 980px;
+    margin: 0 auto;
+}
+
+.wrapper_02 {
+    width: 1300px;
+    margin: 0 auto;
+}
+
+.wrapper_03 {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/* 新闻类型图标 */
+.news_type::before {
+    content: '';
+    display: inline-block;
+    width: 32px;
+    margin-right: 5px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 16px;
+    border: 1px solid transparent;
+}
+
+.news_type_hot::before {
+    content: '热门';
+    color: #ff3636;
+    border-color: #ff3636;
+}
+
+.news_type_notice::before {
+    content: '公告';
+    color: #f4be19;
+    border-color: #f4be19;
+}
+
+.news_type_match {
+    width: 48px;
+    height: 19px;
+    margin-right: 12px;
+    text-align: center;
+    line-height: 19px;
+    color: #999;
+    border: 2px solid #e3e3e3;
+    border-radius: 10px;
+    background: #e3e3e3;
+}
+
+.section_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.header_left {
+    font-size: 22px;
+    font-weight: 600;
+    color: #323235;
+}
+
+.header_left .title {
+    padding-left: 30px;
+    background: url('../images/index.png') no-repeat 0px -101px;
+}
+
+.header_left .title.title-match {
+    background-position: 0 -180px;
+}
+
+.header_left .title.title-hero {
+    background-position: -0px -140px;
+}
+
+.header_left .title.title-schedule {
+    background-position: -157px -102px
+}
+
+.header_right {
+    display: flex;
+    font-size: 14px;
+    color: #999;
+}
+
+
+.header_right a.more {
+    display: block;
+    padding-left: 20px;
+    background: url('../images/index.png') no-repeat -252px 3px;
+}
+
+.header_right a.more:hover {
+    color: #f3c258;
+}
+
+.tab_control {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    background: #f5f5f5;
+}
+
+.tab_control .item {
+    flex: 1;
+    height: 29px;
+    line-height: 29px;
+    text-align: center;
+    color: #999;
+    border-bottom: 3px solid #f5f5f5;
+    cursor: pointer;
+}
+
+.tab_control .item.item_wrap {
+    flex: 0 auto;
+    padding: 0 27px;
+}
+
+.tab_control .item:hover {
+    border-color: #f3c258;
+    color: #333333;
+}
+
+.tab_control .line {
+    width: 1px;
+    height: 20px;
+    background: #e1e1e1;
+}
+
+.tab_keyword {
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: 8px;
+    color: #333;
+}
+
+.tab_keyword .item {
+    height: 24px;
+    padding: 0 14px;
+    margin: 0 8px 10px 0;
+    line-height: 26px;
+    font-size: 14px;
+    background: #f5f5f5;
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.tab_keyword .item:hover {
+    border-color: #f3c258;
+    background: #f3c258;
+    color: #fff;
+}
+
+@keyframes opacotyAnim {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

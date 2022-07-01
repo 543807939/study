@@ -1,0 +1,91 @@
+.down-flow {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 254px;
+    height: 494px;
+    background: url('../images/r_navBg.png') no-repeat;
+}
+
+.down-flow .top-girl {
+    position: absolute;
+    top: 15px;
+    left: 35%;
+    transform: translateX(-50%);
+    width: 165px;
+    height: 145px;
+    color: #62401b;
+    font-size: 14px;
+    line-height: 20px;
+    background: url('../images/r_dj.png') no-repeat;
+}
+
+.down-flow .top-girl p {
+    position: absolute;
+    top: 35px;
+    left: 20px;
+}
+
+.down-flow .links {
+    position: absolute;
+    top: 160px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 117px;
+}
+
+.down-flow .links li {
+    height: 38px;
+    background: url('../images/r_all2022.png') no-repeat -243px 0;
+}
+
+.down-flow .links li a {
+    display: block;
+    height: 100%;
+}
+
+.down-flow .links .prcode {
+    height: 132px;
+    padding-top: 2px;
+    background-position: -243px 0;
+}
+
+.down-flow .links .prcode img {
+    display: block;
+    width: 107px;
+    margin: 0 auto;
+}
+
+.down-flow .links .yd {
+    margin: 1px 0;
+    background-position: 0 -160px;
+}
+
+.down-flow .links .yd:hover {
+    background-position: 0 -240px;
+}
+
+.down-flow .links .wb {
+    background-position: -122px -120px;
+}
+
+.down-flow .links .wb:hover {
+    background-position: -122px -240px;
+}
+
+.down-flow .links .ggz {
+    background-position: -122px -160px;
+}
+
+.down-flow .links .ggz:hover {
+    background-position: -122px -200px;
+}
+
+.down-flow .links .sph {
+    background-position: -122px 0;
+}
+
+.down-flow .links .sph:hover {
+    background-position: -122px -42px;
+}

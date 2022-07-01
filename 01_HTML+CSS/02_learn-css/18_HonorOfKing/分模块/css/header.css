@@ -1,4 +1,7 @@
+@charset "UTF-8";
+
 .header-nav {
+    position: relative;
     background-color: rgba(0, 0, 0, .8);
 }
 
@@ -91,4 +94,69 @@
 .header-nav .header-inner .right-area .info .des {
     font-size: 14px;
     color: #858792;
+}
+
+.header-nav .drop-menu {
+    position: absolute;
+    top: 84px;
+    left: 0;
+    right: 0;
+    height: 0;
+    background-color: rgba(0, 0, 0, .7);
+    z-index: 19;
+    overflow: hidden;
+    transition: height .15s ease-in;
+    /* transition: all .3s linear forwards; */
+}
+
+.header-nav:hover .drop-menu {
+    height: 285px;
+}
+
+.header-nav .drop-menu .drop-menu-inner {
+    display: flex;
+    width: 890px;
+    height: 240px;
+    margin: 0 auto;
+    padding: 15px 0 30px 50px;
+}
+
+
+.header-nav .drop-menu .drop-menu-inner .item {
+    width: 110px;
+    padding: 2px 2.5px 0;
+    text-align: center;
+    color: #c9c9dd;
+}
+
+.header-nav .drop-menu .drop-menu-inner .item dd a {
+    display: block;
+    height: 30px;
+    line-height: 30px;
+}
+
+.header-nav .drop-menu .drop-menu-inner .item dd a:hover {
+    color: #f3c258;
+    text-decoration: underline;
+}
+
+.drop-menu .icon::before {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    background: url('../images/index.png') no-repeat;
+}
+
+.drop-menu .icon.hot::before {
+    background-position: -164px -67px;
+}
+
+.drop-menu .icon.new::before {
+    background-position: -139px -67px;
+}
+
+.drop-menu .icon.grow-protect::before {
+    background-position: -139px -6px;
 }

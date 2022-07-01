@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 400px;
+            background-color: #f08;
+        }
+    </style>
+</head>
+
+<body>
+    <p>
+        white-space 可以设置文本空格和换行的处理方式 <br>
+        默认值是 normal: 合并连续的空白符,换行符会被当作空白符, 超出行盒会换行 <br>
+        nowrap: 合并连续的空白符,换行符会被当作空白符, 文本不会换行 <br>
+        pre: 连续空白会被保留,遇到换行符或者 &lt;br&gt;才会换行 <br>
+        pre-wrap:连续的空白符会被保留。在遇到换行符或者<br>元素，或者需要为了填充「行框盒子 (line boxes)」时才会换行。 <br>
+        pre-line: 连续的空白符会被合并。在遇到换行符或者<br>元素，或者需要为了填充「行框盒子 (line boxes)」时会换行。
+    </p>
+    <div class="box">
+        aaaaaaaaa
+        bbbbbbbbb cccccccc
+        ddddd
+    </div>
+</body>
+
+</html>

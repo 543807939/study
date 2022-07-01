@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>
+        video常见的属性: <br>
+        src: 视频的地址 <br>
+        widht: 视频的宽度 <br>
+        height: 视频的高度 <br>
+        controls: 是否展示控制栏 <br>
+        autoplay: 是否自动播放 <br>
+        muted: 是否静音 <br>
+        poster: 视频未播放时封面的地址
+    </p>
+    <>
+        video是双标签元素,里边可以写上source标签,src写上视频源 <br>
+        也可以写上p元素指定不支持video标签时的显示情况
+    </p>
+    <video src="./video/mi.mp4" controls  muted poster="./images/cover.jpg">
+    </video>
+</body>
+
+</html>
