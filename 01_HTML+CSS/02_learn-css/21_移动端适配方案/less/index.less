@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+.px-to-rem(@length:16px) {
+  result: 1rem * (@length / 37.5);
+}
+body {
+  font-size: 16px;
+}
+.box {
+  width: .px-to-rem(300) [result];
+  height: .px-to-rem(300) [result];
+  // font-size: .px-to-rem(16) [result];
+  background-color: #f08;
+}

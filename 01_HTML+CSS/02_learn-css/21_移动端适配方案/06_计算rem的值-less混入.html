@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet/less" href="./less/index.less">
+    <script src="./js/lessc.js"></script>
+    <script src="./js/lib-flexible.js"></script>
+</head>
+
+<body>
+    <div class="box">
+        通过less的咉射来实现 <br>
+        .px-to-rem(@length) { <br>
+        result: 1rem * (@length / 37.5); <br>
+        } <br>
+        .box { <br>
+        width: .px-to-rem(100) [result]; <br>
+        height: .px-to-rem(100) [result]; <br>
+        background-color: #f08; <br>
+        } <br>
+    </div>
+</body>
+
+</html>

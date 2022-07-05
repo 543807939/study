@@ -1,0 +1,9 @@
+@charset "UTF-8";
+body {
+  font-size: 16px;
+}
+.box {
+  width: 8rem;
+  height: 8rem;
+  background-color: #f08;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            320-375: 15px
+            375-414: 18px
+            414-480: 21px
+            480--- : 24px
+         */
+        @media screen and (min-width:320px) and (max-width:375px) {
+            body {
+                font-size: 15px;
+            }
+        }
+
+        @media screen and (min-width:375px) and (max-width: 414px) {
+            body {
+                font-size: 18px;
+            }
+        }
+
+        @media screen and (min-width:414px) and (max-width: 480px) {
+            body {
+                font-size: 21px;
+            }
+        }
+
+        @media screen and (min-width:480px) {
+            body {
+                font-size: 24px;
+            }
+        }
+
+        /* 
+            320-375: 15px
+            375-414: 18px
+            414-480: 21px
+            480--- : 24px
+         */
+        @media screen and (min-width:320px) {
+            body {
+                font-size: 15px;
+            }
+        }
+
+        @media screen and (min-width:375px) {
+            body {
+                font-size: 18cm;
+            }
+        }
+
+        @media screen and (min-width:414px) {
+            body {
+                font-size: 21px;
+            }
+        }
+
+        @media screen and (min-width:480px) {
+            body {
+                font-size: 24px;
+            }
+        }
+
+        /* 这种实现与上边的饿实现效果一直,因为css的层叠性 */
+    </style>
+</head>
+
+<body>
+    <p>
+        我是字体
+    </p>
+</body>
+
+</html>

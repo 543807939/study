@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            filter: blur(2px);
+        }
+
+        .container {
+            position: relative;
+            width: 300px;
+            height: 300px;
+        }
+
+        .container img {
+            width: 100%;
+        }
+
+        .container .cover {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            background: rgba(0, 0, 0, .6);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+
+<body>
+    <p>
+        blur元素可以将元素进行高斯模糊,需要配合filter使用
+    </p>
+    <p>
+        毛玻璃效果可以通过设置cover层,设置半透明背景加上 backdrop-filter实现;
+    </p>
+
+    <div class="box">
+        <img src="../images/piano.jpg">
+    </div>
+
+    <div class="container">
+        <img src="../images/piano.jpg" alt="">
+        <div class="cover"></div>
+    </div>
+</body>
+
+</html>

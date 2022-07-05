@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            /* display: flow-root; */
+            /* height: 200px; */
+            border: 1px solid #f08;
+            /* overflow: hidden; */
+
+        }
+
+        .float-box {
+            float: left;
+            width: 200px;
+            height: 400px;
+            background: #000;
+        }
+
+        .box1,
+        .box2 {
+            height: 200px;
+            /* overflow: hidden; */
+        }
+
+        .box1 {
+            margin-top: 200px;
+            background-color: #f08;
+        }
+
+        .box2 {
+            margin-top: 100px;
+            background-color: #08f;
+        }
+    </style>
+</head>
+
+<body>
+    BFC(block formatting context)块级格式化上下文 <br>
+    规定了元素在块级盒子内是如果排布的 <br>
+    块级格式化上下文会有以下特性: <br>
+    <ol>
+        <li>块级盒子是从上到下排布的</li>
+        <li>盒子的左侧贴着容器的左边缘</li>
+        <li>包含内部浮动</li>
+        <li>清除外部浮动</li>
+        <li>两个元素之间的上下边距会被重叠</li>
+    </ol>
+
+    <div class="box">
+        <div class="float-box"></div>
+        <p>aaaaaaaaaa</p>
+    </div>
+    <div class="box1"></div>
+    <div class="box2"></div>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div[class*='box'] {
+            width: 300px;
+            height: 300px;
+        }
+
+        .box1 {
+            background-image: linear-gradient(45deg, #f08, #0f8);
+        }
+
+        .box2 {
+            background-image: radial-gradient(#f08, #0f8);
+        }
+
+        .box3 {
+            background-image: repeating-linear-gradient(0, #f08, 10%, #0f8);
+        }
+
+        .box4 {
+            background-image: repeating-radial-gradient(#f08, #0f8);
+        }
+    </style>
+</head>
+
+<body>
+    <p>
+        &lt;gradient&gt; 是一种&lt;image&gt;CSS 数据类型的子类型，用于表现两种或多种颜色的过渡转变。
+        &lt;gradient&gt; 没有内在尺寸；即，不具备固有或首选的尺寸，也不具备首选的比率。其实际的大小取决于其填充元素的大小。
+        <br>所以需要给背景图片设置,而不是背景颜色
+    </p>
+    <p>
+        常见的有线形渐变 linear-gradient <br>
+        径向渐变: radial-gradient <br>
+        重复渐变: repeating-linear-gradient / repeating-radial-gradient <br>
+    </p>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+</body>
+
+</html>

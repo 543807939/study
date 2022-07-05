@@ -1,0 +1,22 @@
+@charset "UTF-8";
+.tabbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  height: calc(env(safe-area-inset-bottom) + 50px);
+  border-top: 1px solid #ddd;
+  background: #fff;
+  z-index: 999;
+}
+.tabbar .item {
+  flex: 1;
+  text-align: center;
+}
+.tabbar .item a {
+  display: block;
+}
+.tabbar .item a img {
+  width: 48px;
+}

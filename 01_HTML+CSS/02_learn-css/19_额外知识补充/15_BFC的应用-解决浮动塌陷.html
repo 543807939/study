@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html {
+            --bordercolor: #08f;
+        }
+
+        .container {
+            display: flow-root;
+            background-color: #f08;
+        }
+
+        .item {
+            float: left;
+            width: 200px;
+            height: 200px;
+            border: 1px solid var(--bordercolor);
+            background-color: #0f8;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+    <p>
+        BFC可以解决浮动的高度塌陷问题,但是需要满足两个条件: <br>
+        1. 浮动元素的父元素必须触发BFC <br>
+        2. 浮动元素的父元素的高度必须是auto <br>
+        BFC元素的高度为auto时,是根据如下计算高度的: <br>
+        1. 如果只有inline-level,则是行高顶部和底部的距离 <br>
+        2. 如果有block-level,则是最顶部块的上边缘和最底部块的下边缘决定的 <br>
+        3. 如果有绝对定位元素,则将其忽略 <br>
+        4. 如果有浮动元素,则会增加高度以包含浮动元素 <br>
+    </p>
+</body>
+
+</html>
