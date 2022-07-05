@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--                             宽度是设备宽度          缩放比例1.0      -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet/less" href="./less/04_less语法-继承-函数-注释-导入.less">
+    <script src="./js/lessc.js"></script>
+</head>
+
+<body>
+    <p class="box">
+        less支持继承语法: <br>
+        &:extend(选择器),这样生成的代码是并集选择器,一般使用混入. <br>
+    </p>
+    <p>
+        内置函数: <br>
+        less中有很多内置函数: <br>
+        color(): 可以将传入的颜色改为十六进制 <br>
+        convert(): 可以将传入的像素改为第二个参数单位的值 <br>
+        ceil(): 可以将数字向上取整 <br>
+        max(): 取最大值 <br>
+        还有很多 <br>
+    </p>
+    <p>
+        作用域: <br>
+        属性取值时,会优先在当前作用域(更优先)或者混入作用域中查找,如果找不到再一层一层网上查找 <br>
+    </p>
+    <p>
+        导入: <br>
+        导入方法和css的导入方法一样 <br>
+        导入less文件之后,其内部的变量都可以使用 <br>
+        如果导入的是.less扩展名,可以将.lee省去 <br>
+    </p>
+</body>
+
+</html>

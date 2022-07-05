@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+@base-size: 14px;
+@container-width: 1200px;
+
+p {
+  font-size: @base-size + 10px;
+}
+.border(@borderWidth:10px,@color:#f08) {
+  border: @borderWidth solid @color;
+}
+.text_ellipsis {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.p1 {
+  width: 200px;
+  background: #f08;
+  .text_ellipsis();
+  .border();
+}
+.p2 {
+  width: 150px;
+  background-color: #08f;
+  .text_ellipsis();
+  .border();
+}

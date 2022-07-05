@@ -1,0 +1,22 @@
+@charset "UTF-8";
+.base,
+.box,
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: #f08;
+}
+.box {
+  color: #000;
+}
+/* 两种写法都行 */
+.box {
+  color: #000;
+}
+/* 两种写法都行 */
+.box {
+  color: #000;
+}
+p {
+  color: #333;
+}

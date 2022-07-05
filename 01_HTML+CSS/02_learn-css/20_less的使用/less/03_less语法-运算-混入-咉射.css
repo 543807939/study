@@ -1,0 +1,25 @@
+@charset "UTF-8";
+p {
+  font-size: 24px;
+}
+.text_ellipsis {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.p1 {
+  width: 200px;
+  background: #f08;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  border: 10px solid #f08;
+}
+.p2 {
+  width: 150px;
+  background-color: #08f;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  border: 10px solid #f08;
+}
