@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 递归实现 x的y次幂函
+        function pow(x, y) {
+            if (y == 1) {
+                return x
+            }
+            return x * pow(x, y - 1)
+        }
+        console.log(pow(2, 10));
+
+        // 递归实现斐波那契数列
+        // 1 1 2 3 5 8 13 21 34 55
+        function getFenapocciSequence(num) {
+            if (num === 1 || num === 2) {
+                return 1
+            }
+            return getFenapocciSequence(num - 1) + getFenapocciSequence(num - 2)
+        }
+        console.log(getFenapocciSequence(10));
+
+        // for循环实现斐波那契数列
+        function getFenapocciSequenceByFor(n) {
+            var result = 0
+            if (n === 1 || n === 2) {
+                result = 1
+            }
+            var n1 = 1;
+            var n2 = 1;
+            for (let index = 3; index <= n; index++) {
+                result = n1 + n2
+                n1 = n2;
+                n2 = result;
+            }
+            return result
+        }
+        console.log(getFenapocciSequenceByFor(10));
+    </script>
+</body>
+
+</html>

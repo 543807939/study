@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var num1 = 123;
+        var num2 = '123';
+
+        // == 如果两端运算元类型不同 运算符会将运算元做隐式转换,会将运算元转换成Number类型再比较
+        console.log(num1 == num2);
+        var flag = true;
+        console.log(flag == num1);
+
+        // ===  不会隐式转换, 类型不同直接false
+
+        var obj = {
+            name: '张三',
+            valueOf() {
+                return 123
+            }
+        }
+
+        console.log(obj == 123);
+    </script>
+</body>
+
+</html>

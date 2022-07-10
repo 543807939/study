@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // [0 -1) *100  
+        // [0,100)
+        const num = Math.floor(Math.random() * 100)
+        let time = 0
+        do {
+            const answer = prompt(`请输入您猜的数字,您还有${7 - time}次机会`)
+            if (answer > num) {
+                console.log('猜大了');
+            } else if (answer < num) {
+                console.log('猜小了');
+            } else {
+                console.log('恭喜你猜对了');
+                break;
+            }
+            time++
+            if (time == 7) {
+                console.log('七次机会用完!');
+                break;
+            }
+        } while (true);
+    </script>
+</body>
+
+</html>

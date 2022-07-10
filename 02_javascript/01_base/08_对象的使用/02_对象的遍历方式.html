@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var obj = {
+            name: '张三',
+            age: 14,
+            nickname: '张麻子',
+            sayHello() {
+                console.log('hello');
+            }
+        };
+        // 1. for循环
+        var keys = Object.keys(obj);
+        for (let index = 0; index < keys.length; index++) {
+            console.log(`${keys[index]} : ${obj[keys[index]]}`);
+        }
+        // 2. for...in循环
+        for (const key in obj) {
+            console.log(`${key}: ${obj[key]}`);
+        }
+    </script>
+</body>
+
+</html>

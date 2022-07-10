@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>
+        1. 隐式转换: 任意类型与字符串相加,都会先转换成字符串类型再相加 <br>
+        某些函数执行也会自动将参数转换成字符串类型(console.log())
+    </p>
+    <p>
+        2. 显示转换: 使用String()包装类
+    </p>
+    <script>
+        // 1. 隐式转换
+        const num = 1;
+        console.log(num + '');
+
+        // 2. String()包装类
+        const age = 14;
+        console.log(String(age));
+    </script>
+</body>
+
+</html>

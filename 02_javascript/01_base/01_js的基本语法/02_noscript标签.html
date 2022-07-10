@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        noscript {
+            display: block;
+            font-size: 40px;
+            color: #f08;
+        }
+
+        noscript .box {
+            width: 100px;
+            height: 100px;
+            background-color: #f00;
+        }
+    </style>
+</head>
+
+<body>
+    <p>
+        noscript标签是在浏览器不支持javascript时会展示的内容,使网站对用户更加友好 <br>
+        可以给noscript内的元素设置样式,是一个行内元素
+    </p>
+
+    <script>
+        console.log('js真好玩');
+    </script>
+    <noscript>
+        您的网站不支持javascript
+        <div class="box"></div>
+    </noscript>
+</body>
+
+</html>

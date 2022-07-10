@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        if (true) {
+            console.log('结果是true');
+        }
+        var score = 90;
+        if (score >= 90) {
+            console.log('成绩超过了90,可以出去玩啦');
+        }
+
+        // 用户输入买苹果的个数,每个五块,买的超过五个,立减八元
+        var num = prompt('你要买多少个苹果呀?');
+        var price = 5;
+        var result = 0;
+        if (num > 5) {
+            result = price * num - 8
+        } else {
+            result = price * num
+        }
+        console.log(result);
+    </script>
+</body>
+
+</html>

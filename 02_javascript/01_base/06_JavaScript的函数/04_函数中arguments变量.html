@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function bar(name, age) {
+            // 函数中都有一个变量, arguments,是一个类数组的变量 (类数组有长度,但是没有数组的方法)
+            // 存放着实际传入的参数
+            console.log(name, age);
+            console.log(arguments);
+            arguments[0] = 10
+            console.log(arguments);
+        }
+        bar(12, 123, 123, 12, 3);
+        bar(12);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // new 一个函数的过程
+        // 创建一个新的对象
+        // 这个对象的__proto__指向构造函数的prototype属性
+        // this指向这个对象
+        // 执行函数
+        // 如果有return一个非空对象,则返回这个对象;否则返回新对象
+        function Student(name, age, height) {
+            console.log(this);
+            this.name = name;
+            this.age = age;
+            this.height = height;
+            this.intro = function () {
+                console.log(`我是${this.name},我今年${this.age}岁了,我身高${this.height}厘米`);
+            }
+        }
+        var stu1 = new Student('张三', 14, 170);
+        console.dir(stu1);
+        console.log(Student);
+        console.log(Date);
+    </script>
+</body>
+
+</html>

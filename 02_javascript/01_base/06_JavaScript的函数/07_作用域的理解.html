@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // ES6之前只有全局作用域和函数作用域
+
+        var nickname = '法外狂徒';
+
+        for (var i = 0; i < 10; i++) {
+            var name = '张三'
+        }
+        console.log(name);
+
+        // 查找变量的时候,会先在自己的作用域中查找,然后沿着作用域链查找,一直到undefined
+        // 函数定义的时候,作用域链就已经确认了
+    </script>
+</body>
+
+</html>

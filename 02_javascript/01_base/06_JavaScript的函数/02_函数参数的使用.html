@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 定义函数的时候,可以传入一些参数,这些参数是形参,形参可以有默认值
+        // 如果未定义默认值,调用的时候也没用传值,那么值就是undefined
+        function printInfo(name = '张三', age = 23, nickname = '法外狂徒') {
+            console.log(`我的名字是${name},今年${age}岁了,法号${nickname}`);
+        };
+        printInfo()
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // switch比较使用的是全等,不会做转换
+        // 必须加 break , 不然后边的也会执行
+        let score = 90;
+        switch (score) {
+            case 90: {
+                console.log(90);
+                break
+            }
+            default: {
+                console.log('不是90');
+            }
+        }
+    </script>
+</body>
+
+</html>

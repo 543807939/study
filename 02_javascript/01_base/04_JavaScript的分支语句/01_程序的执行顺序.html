@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 程序中代码的执行顺序有三种
+        // 1. 顺序执行: 从上到下依次执行
+        console.log('第一个执行');
+        console.log('第二个执行');
+        console.log('第三个执行');
+
+        // 2. 分支语句: 条件为true时才会执行
+        var isLogin = false;
+        if (isLogin) {
+            console.log('用户已经登录');
+        } else {
+            console.log('还未登录,即将返回首页');
+        }
+        // 3. 循环语句: 根据条件,重复执行
+        var num = 1
+        while (num !== 10) {
+            num++
+            console.log('我免费啦');
+        }
+    </script>
+</body>
+
+</html>

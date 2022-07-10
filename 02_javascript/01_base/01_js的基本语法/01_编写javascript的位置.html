@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>1. 可以编写在html内部</p>
+    <a href="javascript:alert('弹窗')" onclick="console.log(this)">百度一下,大家一起吃席</a>
+    <p>
+        2. 可以编写在script元素内
+    </p>
+    <a id="google" href="javascript:;">谷歌一下</a>
+    <script>
+        // alert('hello world');
+        const googleEle = document.querySelector('#google')
+        googleEle.addEventListener('click', () => {
+            console.log('谷歌一下.你就入狱');
+        })
+    </script>
+    <p>
+        3. 编写在外部文件
+    </p>
+    <a href="#" id="bing">bing一下</a>
+    <script src="./js/01_bing.js"></script>
+</body>
+
+</html>

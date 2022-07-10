@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var num = 0;
+        num++;
+        console.log(num);
+        num--;
+        console.log(num);
+
+        // ++num 和 num++ 如果不是用在表达式中,区别不大
+        // 如果用在表达式中,则 ++num 是先自增再运算, num++ 是先运算,再自增
+
+        var num1 = 10;
+        var result = num1++ + num1++;
+        console.log(result);
+    </script>
+</body>
+
+</html>
