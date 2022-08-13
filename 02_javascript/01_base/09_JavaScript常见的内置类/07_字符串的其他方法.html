@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1. 字符串拼接
+        const str = 'hello world';
+        let str1 = str + ' ,hello js';
+        console.log(str1);
+        const str2 = str.concat(', hello,js', ' hello,node');
+        console.log(str2);
+        // 2. 删除首尾空字符串
+        const str3 = '   hello         world       '
+        console.log(str3.trim());
+        // 3. 字符串分割
+        const res = str.split(' ')
+        console.log(res);
+    </script>
+</body>
+
+</html>

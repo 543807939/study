@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const students = [{
+            name: '张三',
+            score: 100,
+        }, {
+            name: '李四',
+            score: 67,
+        }, {
+            name: '王五',
+            score: 84,
+        }, {
+            name: '赵六',
+            score: 19,
+        }, {
+            name: '田七',
+            score: 89,
+        }, {
+            name: '老八',
+            score: 73,
+        }, {
+            name: '九儿',
+            score: 92,
+        }, {
+            name: '钱十',
+            score: 88,
+        }, {
+            name: '茅十一',
+            score: 59,
+        }, {
+            name: '茅十二',
+            score: 85,
+        }, {
+            name: '茅十三',
+            score: 94,
+        }];
+        // 如果 compareFunction(a, b) 小于 0 ，那么 a 会被排列到 b 之前；
+        // 如果 compareFunction(a, b) 等于 0 ， a 和 b 的相对位置不变。备注： ECMAScript 标准并不保证这一行为，而且也不是所有浏览器都会遵守（例如 Mozilla 在 2003 年之前的版本）；
+        // 如果 compareFunction(a, b) 大于 0 ， b 会被排列到 a 之前。
+        const res = students.sort((sutdentA, studentB) => sutdentA.score - studentB.score);
+        console.log(res);
+    </script>
+</body>
+
+</html>

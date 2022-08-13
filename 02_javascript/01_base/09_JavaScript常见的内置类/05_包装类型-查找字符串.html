@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const str = 'hello world';
+        // 判断字符串中是否包含另一个字符串
+        const item = 'lo';
+        // 1. indexOf(str,fromIndex)    // str: 要搜索的字符串; fromIndex:开始的位置; 返回索引,如果没有则返回-1
+        const flag = str.indexOf(item);
+        console.log(flag);
+
+        // 2. es6之后新增的方法  
+        // String.prototype.includes()      // 返回一个 Boolean 值
+        console.log(str.includes(item));
+
+        // 3. String.prototype.startsWith()     // 字符串是否以指定字符串开头
+        // 4. String.prototype.endsWith()       //  字符串是否以指定字符串结尾
+
+        // 5. String.prototype.replace()    //  将字符串中的字符串改为指定的字符串
+        str.replace()
+    </script>
+</body>
+
+</html>

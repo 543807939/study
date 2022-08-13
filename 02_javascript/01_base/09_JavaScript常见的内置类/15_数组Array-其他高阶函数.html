@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const students = [{
+            name: '张三',
+            score: 100,
+        }, {
+            name: '李四',
+            score: 67,
+        }, {
+            name: '王五',
+            score: 84,
+        }, {
+            name: '赵六',
+            score: 19,
+        }, {
+            name: '田七',
+            score: 89,
+        }, {
+            name: '老八',
+            score: 73,
+        }, {
+            name: '九儿',
+            score: 92,
+        }, {
+            name: '钱十',
+            score: 88,
+        }, {
+            name: '茅十一',
+            score: 59,
+        }, {
+            name: '茅十二',
+            score: 85,
+        }, {
+            name: '茅十三',
+            score: 94,
+        }];
+        // 1. forEach
+        // 遍历数组,对数组元素做某些操作
+        students.forEach(item => {
+            item.age = Math.floor(Math.random() * 6) + 12
+        })
+        console.log(students);
+        // 2. filter
+        // 遍历数组,将返回值为true的那一项放到返回的数组中
+        const badStudents = students.filter(item => {
+            return item.score < 60
+        })
+        console.log(badStudents);
+        // 3. map
+        // 遍历数组,返回一个新数组,保存操作后的数组
+        const goodStudents = students.map(item => {
+            return {
+                ...item,
+                score: item.score + 100
+            }
+        })
+        console.log(goodStudents);
+        // reduce
+        // 遍历数组,可以传入初始值,返回操作之后的结果,一般用来累加,累乘
+        const totalScore = students.reduce((previousValue, item) => {
+            return previousValue + item.score
+        }, 0)
+        console.log(totalScore);
+
+        // 综合练习
+        var nums = [11, 20, 55, 100, 88, 32];
+
+        // 过滤所有的偶数,咉射所有偶数的平方,计算他们的和
+        const res = nums.filter(item => item % 2 === 0).map(item => item ** 2).reduce((previousValue, item) => previousValue + item, 0)
+        console.log(res);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    下边是盒子
+    <!-- 下边是盒子 -->
+    <div class="box">
+        <!-- 我是注释 -->
+        <p>
+            我是盒子内的文字
+        </p>
+    </div>
+    <script>
+        const nodeList = document.body.childNodes;
+        const textNode = nodeList[1];
+        const commentNode = nodeList[2];
+        const elementNode = nodeList[3];
+        console.log(textNode, commentNode, elementNode);
+        console.log(textNode.nodeName, commentNode.nodeName, elementNode.nodeName);
+        console.log(textNode.nodeType, commentNode.nodeType, elementNode.nodeType);
+        console.log(textNode.tagName, commentNode.tagName, elementNode.tagName);
+
+
+    </script>
+</body>
+
+</html>

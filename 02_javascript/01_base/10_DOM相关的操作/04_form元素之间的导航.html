@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="#">
+        <label for="">姓名:<input type="text"></label> <br>
+        <label for="">性别: <label for="male"><input type="radio" id="male" name="gender">男</label><label
+                for="female"><input type="radio" id="female" name="gender">女</label></label> <br>
+
+        <label for="">密码: <input type="password"></label>
+    </form>
+    <script>
+        // 获取表单元素
+        const form = document.forms[0];
+        console.log(form);
+        // 获取表单元素的子元素
+        const formElements = form.elements;
+        console.log(formElements);
+    </script>
+</body>
+
+</html>

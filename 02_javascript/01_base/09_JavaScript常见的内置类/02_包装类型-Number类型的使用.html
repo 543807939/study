@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Math的静态属性
+        console.log(Number.MAX_VALUE);
+        console.log(Number.MIN_VALUE);
+        console.log(Number.MAX_SAFE_INTEGER);
+        console.log(Number.MIN_SAFE_INTEGER);
+
+        // Math的类方法
+        // Math.parseInt(str)  将字符串转换为整数类型
+        // Math.parseFloat(str,[x])    将字符串转换为浮点类型,保留x位小数
+
+        // 对象方法
+        const num = 100;
+        // 1. toString() 可以传入一个参数,表示输出为多少进制
+        console.log(num.toString(2)); // 0b
+        console.log(num.toString(8));   // 0o
+        console.log(num.toString(16));  // 0x
+
+        //  数字没有方法 不能调用.toString()
+        //  可以通过 ..调用
+        // 123.toString()
+        123..toString()
+        // 2. toFixed(x)     格式化一个数字,保留x位小数
+        console.log(num.toFixed(3));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const fruits = ['apple', 'orange', 'watermelon', 'peach', 'cherry', 'pear', 'banana'];
+        // slice 截取数组,返回新的数组,不会改变原数组
+        const littleFruit = fruits.slice(0, 4)
+        console.log(littleFruit);
+        // concat 拼接数组,返回新数组
+        const moreFruit = fruits.concat(['unknown', 'undefined'])
+        console.log(moreFruit);
+        // join 生成字符串
+        const str = moreFruit.join('-')
+        console.log(str);
+    </script>
+</body>
+
+</html>

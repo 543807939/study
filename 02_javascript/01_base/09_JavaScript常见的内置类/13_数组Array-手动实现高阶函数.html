@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        Object.defineProperty(Array.prototype, 'myForEach', {
+            enumerable: false,
+            value: function (fn) {
+                if (typeof fn !== 'function') {
+                    return console.log('请传入一个函数');
+                }
+                console.log(this);
+                for (const key in this) {
+                    fn(this[key], key, this)
+                }
+            }
+        })
+        // Array.prototype.myForEach = 
+        const arr = [0, 1, 2, 3, 4, 5];
+        arr.myForEach((item, index, arr) => {
+            console.log(item, index, arr);
+        })
+
+        Object.defineProperty(Array.prototype, 'myFind', {
+            enumerable: false,
+            value(fn) {
+                if (typeof fn !== 'function') {
+                    return console.log('请传入一个函数');
+                }
+                for (const key in this) {
+                    console.log(this[key]);
+                    if (fn(this[key], key, this)) {
+                        return this[key]
+                    }
+                }
+            }
+        })
+        Object.defineProperty(Array.prototype, 'myFindIndex', {
+            enumerable: false,
+            value(fn) {
+                if (typeof fn !== 'function') {
+                    return console.log('请传入一个函数');
+                }
+                for (const key in this) {
+                    console.log(this[key]);
+                    if (fn(this[key], key, this)) {
+                        return key
+                    }
+                }
+            }
+        })
+        const students = [{
+            name: '张三',
+            age: 14
+        }, {
+            name: '李四',
+            age: 14
+        }, {
+            name: '王五',
+            age: 14
+        }, {
+            name: '赵六',
+            age: 14
+        }, {
+            name: '田七',
+            age: 14
+        }]
+        const res = students.myFind((item) => {
+            return item.name === '李四'
+        })
+        console.log(res);
+        const resIndex = students.myFindIndex((item) => {
+            return item.name === '李四'
+        })
+        console.log(resIndex);
+    </script>
+</body>
+
+</html>

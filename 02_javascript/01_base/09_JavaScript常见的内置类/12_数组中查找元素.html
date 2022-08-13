@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const fruits = ['apple', 'orange', 'watermelon', 'peach', 'cherry', 'pear', 'banana'];
+        // indexOf 返回第一个找到的元素的索引,适用于存放基本数据类型的数组
+        console.log(fruits.indexOf('watermelon'));
+
+        //  findIndex 返回第一个符合的元素的索引 适用于复杂数据类型
+        const goods = [
+            {
+                name: 'apple',
+                price: 100,
+            },
+            {
+                name: 'orange',
+                price: 100,
+            },
+            {
+                name: 'watermelon',
+                price: 100,
+            },
+            {
+                name: 'peach',
+                price: 100,
+            },
+            {
+                name: 'cherry',
+                price: 100,
+            },
+            {
+                name: 'pear',
+                price: 100,
+            },
+            {
+                name: 'banana',
+                price: 100,
+            },
+        ];
+        const index = goods.findIndex(item => {
+            return item.name === 'pear'
+        })
+        console.log(index);
+
+        //  findIndex 返回第一个符合的元素 适用于复杂数据类型
+        const item = goods.find(item => {
+            return item.name = 'cherry'
+        })
+        console.log(item);
+
+        // function foo(row) {
+        //     this.userList.forEach(item => item.isChecked = false)
+        //     row.isChecked = true
+        // }
+
+        const arr = [{ name: '张三' }, { name: '李四' }, { name: '张三' }]
+        const resArr = [];
+        arr.forEach(item => {
+            if (!resArr.find(resItem => resItem.name === item.name)) {
+                resArr.push(item)
+            }
+        });
+        console.log(resArr);
+        const set = new Set(arr);
+        const arr1 = Array.from(set);
+        console.log(set);
+        console.log(arr1);
+    </script>
+</body>
+
+</html>
