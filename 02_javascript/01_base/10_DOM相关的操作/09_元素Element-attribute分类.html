@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+        attribute的分类:
+        1. html标准attribute
+        2. 自定义的attribute
+     -->
+    <div class="box" id="box" name="boxName" title="boxTitle" height="1.88">我是box</div>
+    <input type="checkbox" checked="checked">
+    <script>
+        /* 
+            1. 所有的attribute都支持的操作
+            ele.hasAttribute(name)
+            ele.getAttribute(name)
+            ele.setAttribute(name)
+            ele.removeAttribute(name)
+            ele.attributes
+
+            获取时属性名大小写不敏感
+            属性值是字符串类型
+        */
+        const box = document.querySelector('.box')
+        console.log(box.hasAttribute('name'));
+        for (const attribute of box.attributes) {
+            console.log(attribute);
+        }
+        const checkbox = document.querySelector('input')
+        console.log(checkbox.getAttribute('checked'));
+        console.log(checkbox.getAttribute('type'));
+    </script>
+</body>
+
+</html>

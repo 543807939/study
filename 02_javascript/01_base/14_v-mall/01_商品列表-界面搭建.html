@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/base.css" />
+    <style>
+      .crumbs {
+        height: 63px;
+        line-height: 63px;
+        font-size: 12px;
+        color: #333;
+      }
+      .crumbs .item {
+        cursor: pointer;
+      }
+      .crumbs .item:last-child {
+        color: #000;
+      }
+      .crumbs .item:hover {
+        color: rgb(207, 10, 44);
+      }
+      .opertion {
+        padding-left: 24px;
+        background-color: #fff;
+      }
+      .opertion > ul {
+        display: flex;
+        height: 48px;
+        line-height: 48px;
+        font-size: 12px;
+      }
+      .opertion > ul li {
+        width: 104px;
+        padding: 0 12px;
+        cursor: pointer;
+      }
+      .opertion > ul li:first-child {
+        color: #999;
+        cursor: auto;
+      }
+      .opertion > ul li.active {
+        color: #cf0a2c;
+      }
+      .products {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        margin-top: 24px;
+      }
+      .products > .item {
+        width: 291px;
+        height: 386px;
+        margin-top: 10px;
+        background-color: #fff;
+      }
+      .products > .item:hover {
+        box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
+      }
+      .products > .item > a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .products > .item > a .album {
+        width: 180px;
+        height: 179px;
+        margin: 32px 0;
+        text-align: center;
+      }
+      .products > .item > a .name {
+        font-size: 14px;
+        font-weight: 600;
+      }
+      .products > .item > a .feature {
+        height: 14px;
+        margin-top: 4px;
+        font-size: 13px;
+        opacity: 0.5;
+      }
+      .products > .item > a .price {
+        margin-top: 12px;
+        padding: 1px 0;
+        font-size: 16px;
+        font-weight: 600;
+        color: rgb(207, 10, 44);
+      }
+      .service .tip {
+        display: inline-block;
+        padding: 0 4px;
+        margin-right: 4px;
+        font-size: 12px;
+        color: rgb(207, 10, 44);
+        border: 1px solid rgba(207, 10, 44, 0.4);
+        border-radius: 4px;
+      }
+      .products > .item > a .comment {
+        margin-top: 8px;
+        font-size: 12px;
+        color: #000;
+        opacity: 0.5;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="crumbs">
+        <span class="item">首页</span>
+        <span>&gt;</span>
+        <span class="item">笔记本</span>
+      </div>
+      <div class="opertion">
+        <ul class="category">
+          <li>分类：</li>
+          <li>笔记本</li>
+          <li>台式机</li>
+          <li>智慧屏</li>
+        </ul>
+        <ul class="discount">
+          <li>服务优惠：</li>
+          <li class="discount-child discount-1">仅看有货</li>
+          <li class="discount-child discount-2">分期免息</li>
+          <li class="discount-child discount-3">优惠商品</li>
+        </ul>
+        <ul class="sort">
+          <li>排序：</li>
+          <li class="active">综合</li>
+          <li>最新</li>
+          <li>评论数</li>
+          <li>价格</li>
+        </ul>
+      </div>
+      <ul class="products">
+        <!-- <li class="item">
+          <a href="#">
+            <img class="album" src="./images/album01.webp" alt="" />
+            <p class="name">HUAWEI MatePad 11 智能磁吸键盘</p>
+            <p class="feature">一键语音，实时转文字</p>
+            <p class="price">￥449</p>
+            <div class="service">
+              <div class="tip">分期免息</div>
+              <div class="tip">赠积分</div>
+            </div>
+            <div class="comment">
+              <span>4081人评价</span>
+              <span>97% 好评</span>
+            </div>
+          </a>
+        </li> -->
+      </ul>
+    </div>
+    <script src="./js/data.js"></script>
+    <script>
+      const baseURL = "https://res.vmallres.com/pimages";
+
+      render(resultList);
+
+      function render(goodsList) {
+        const products = document.querySelector(".products");
+        const fragment = document.createDocumentFragment();
+        for (const iterator of goodsList) {
+          const item = document.createElement("li");
+          item.classList.add("item");
+          const link = document.createElement("a");
+          link.href = "#";
+          item.append(link);
+          // image
+          const album = document.createElement("img");
+          album.classList.add("album");
+          album.src = "./images/album01.webp";
+          link.append(album);
+          // name
+          const nameBox = document.createElement("p");
+          nameBox.classList.add("name");
+          nameBox.textContent = iterator.name;
+          link.append(nameBox);
+          // featrue
+          const featureBox = document.createElement("p");
+          featureBox.classList.add("feature");
+          featureBox.textContent = iterator.promotionInfo;
+          link.append(featureBox);
+          // price
+          const priceBox = document.createElement("p");
+          priceBox.classList.add("price");
+          priceBox.textContent = "￥" + iterator.price;
+          link.append(priceBox);
+          // service
+          const serviceBox = document.createElement("div");
+          serviceBox.classList.add("service");
+          for (const serviceItem of iterator.promoLabels) {
+            const serviceItemBox = document.createElement("div");
+            serviceItemBox.classList.add("tip");
+            serviceItemBox.textContent = serviceItem;
+            serviceBox.append(serviceItemBox);
+          }
+          link.append(serviceBox);
+          // comment
+          const commentBox = document.createElement("div");
+          commentBox.classList.add("comment");
+          const rateCountBox = document.createElement("span");
+          rateCountBox.textContent = iterator.rateCount + "评价";
+          rateCountBox.style.marginRight = "5px";
+          const goodRateBox = document.createElement("span");
+          goodRateBox.textContent = iterator.goodRate + "%好评";
+          commentBox.append(rateCountBox);
+          commentBox.append(goodRateBox);
+          fragment.append(item);
+        }
+        products.innerHTML = "";
+        products.append(fragment);
+
+        for (let index = 0; index < 2; index++) {
+          const li = document.createElement("li");
+          li.style.height = "0";
+          li.classList.add("item");
+          products.append(li);
+        }
+      }
+      const discountElList = document.querySelectorAll(".discount-child");
+      const discountParentEl = document.querySelector(".discount");
+      for (const discountEl of discountElList) {
+        discountEl.addEventListener("click", (e) => {
+          e.target.classList.toggle("active");
+          const activeList = Array.from(
+            discountParentEl.querySelectorAll(".active")
+          );
+          const filterContains = activeList.map((item) =>
+            item.textContent.trim()
+          );
+          const goodsList = resultList.filter((item) => {
+            return (
+              item.services.length ===
+              Array.from(new Set([...item.services, ...filterContains])).length
+            );
+          });
+          render(goodsList);
+        });
+      }
+    </script>
+  </body>
+</html>

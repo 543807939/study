@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .time {
+            display: flex;
+            height: 25px;
+            line-height: 25px;
+            font-size: 17px;
+            user-select: none;
+        }
+
+        .time-num {
+            padding: 0 5px;
+            color: #fff;
+            border-radius: 5px;
+            background-color: rgba(255, 0, 0, .7);
+        }
+
+        .split {
+            margin: 0 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="time">
+        <span class="hours time-num">03</span>
+        <span class="split">:</span>
+        <span class="minute time-num">50</span>
+        <span class="split">:</span>
+        <span class="second time-num">20</span>
+    </div>
+    <script>
+        const timeBox = document.querySelector('.time')
+        const hoursBox = timeBox.querySelector('.hours')
+        const minuteBox = timeBox.querySelector('.minute')
+        const secondBox = timeBox.querySelector('.second')
+
+        function start(hours = 1, minute, second) {
+            // 转换成秒
+            let restTime = hours * 3600 + (minute && minute * 60 || 0) + (Number(second) || 0)
+
+            // 回调函数
+            const fn = () => {
+                const time = transTime(restTime)
+                setTime(time.h, time.m, time.s)
+                restTime--
+                if (restTime < 0) {
+                    return clearInterval(timer)
+                }
+            }
+
+            // 程序开始执行一次
+            fn()
+            const timer = setInterval(fn, 1000)
+
+            // 秒转换成时分秒
+            function transTime(second) {
+                const s = second % 60
+                const m = Math.floor(second / 60) % 60
+                const h = Math.floor(second / 3600)
+                return {
+                    h,
+                    m,
+                    s
+                }
+            }
+
+            // 赋值函数
+            function setTime(hours, minute, second) {
+                hoursBox.textContent = (hours + '').padStart(2, '0')
+                minuteBox.textContent = (minute + '').padStart(2, '0')
+                secondBox.textContent = (second + '').padStart(2, '0')
+            }
+        }
+        start(0, 0, 5)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            font-size: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box" style="background: linear-gradient(to right, rgba(0,255,127,.3), rgba(255,0,128,.2));">
+        我是盒子
+    </div>
+    <script>
+        const box = document.querySelector('.box')
+        box.addEventListener('click', e => {
+            box.style.height = '400px'
+            const fontSize = getComputedStyle(box)
+            console.log(fontSize);
+        })
+    </script>
+</body>
+
+</html>

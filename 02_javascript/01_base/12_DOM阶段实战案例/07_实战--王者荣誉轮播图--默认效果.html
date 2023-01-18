@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+      .banner {
+        width: 604px;
+        margin: 100px auto;
+      }
+      .banner .img-list {
+        position: relative;
+        height: 298px;
+        overflow: hidden;
+      }
+      .banner .img-list .item {
+        position: absolute;
+        left: 100%;
+        transition: left 0.3s linear;
+      }
+      .banner .img-list img {
+        width: 604px;
+      }
+      .banner .img-list .item:first-child {
+        left: 0;
+      }
+      .title-list {
+        display: flex;
+        height: 44px;
+        line-height: 44px;
+      }
+      .title-list .item {
+        flex: 1;
+        text-align: center;
+        background: #000;
+        color: #b1b2be;
+      }
+      .title-list .item a {
+        display: block;
+      }
+      .title-list .item.active {
+        background: rgba(38, 38, 38);
+        color: #f3c258;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="banner">
+      <ul class="img-list">
+        <li class="item"><img src="./image/banner01.jpeg" /></li>
+        <li class="item"><img src="./image/banner02.jpeg" /></li>
+        <li class="item"><img src="./image/banner03.jpeg" /></li>
+        <li class="item"><img src="./image/banner04.jpeg" /></li>
+        <li class="item"><img src="./image/banner05.jpeg" /></li>
+      </ul>
+      <ul class="title-list">
+        <li class="item active"><a href="#">背诗篇赢皮肤</a></li>
+        <li class="item"><a href="#">皮肤创作前瞻</a></li>
+        <li class="item"><a href="#">云中专线</a></li>
+        <li class="item"><a href="#">奕星滕王阁序</a></li>
+        <li class="item"><a href="#">妲己时之奇旅</a></li>
+      </ul>
+    </div>
+    <script>
+      const banner = document.querySelector(".banner");
+      const titleList = document.querySelector(".title-list");
+      const titleItemList = Array.from(titleList.children);
+      const imgItemList = Array.from(
+        document.querySelector(".img-list").children
+      );
+      let timer = null;
+      let activeIndex = 0;
+
+      function switchBanner() {
+        titleItemList[activeIndex]?.classList.add("active");
+        for (let index = 0; index < imgItemList.length; index++) {
+          if (index < activeIndex) {
+            imgItemList[index].style.left = "-100%";
+          } else if (index === activeIndex) {
+            imgItemList[index].style.left = "0";
+          } else {
+            imgItemList[index].style.left = "100%";
+          }
+        }
+      }
+
+      titleList.addEventListener("mouseover", (e) => {
+        titleItemList[activeIndex]?.classList.remove("active");
+
+        activeIndex = titleItemList.findIndex(
+          (item) => item.children[0] === e.target
+        );
+        switchBanner();
+      });
+
+      function autoPlay() {
+        titleItemList[activeIndex]?.classList.remove("active");
+        activeIndex++;
+        if (activeIndex >= titleItemList.length) {
+          activeIndex = 0;
+        }
+        switchBanner();
+      }
+
+      timer = setInterval(autoPlay, 1000);
+
+      banner.addEventListener("mouseover", () => {
+        timer && clearInterval(timer);
+      });
+      banner.addEventListener("mouseout", () => {
+        timer = setInterval(autoPlay, 1000);
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 300px;
+            height: 300px;
+            margin: 100px auto;
+            text-align: center;
+            line-height: 300px;
+            background: linear-gradient(45deg, rgba(256, 128, 0, .1), rgba(128, 256, 0, .3));
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        啊哈哈哈
+    </div>
+    <script>
+        const box = document.querySelector('.box')
+        const boxStyle = getComputedStyle(box)
+        console.log(boxStyle.width, boxStyle.height);
+
+        // clientWidth: 元素的内容宽度 + 内边距
+        // clientHeight: 元素的内容高度 + 内边距
+        // clientTop: 元素的上边框
+        // clientLeft: 元素的左边框
+
+        // offsetHeight: 元素完整的高度
+        // offsetWidth: 元素完整的宽度
+        // offsetTop: 元素相对父元素的y的距离
+        // offsetLeft: 元素相对父元素的x的距离
+
+        // scrollHeight: 元素可滚动区域的高度
+        // scrollWidht: 元素可滚动区域的宽度
+        // scrollTop: 元素已滚动的y
+        // scrollLeft: 元素已滚动的x
+    </script>
+</body>
+
+</html>

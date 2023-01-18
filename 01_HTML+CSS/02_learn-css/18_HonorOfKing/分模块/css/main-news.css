@@ -13,11 +13,12 @@
     width: 605px;
     color: #b1b2be;
     background-color: #000;
+    overflow: hidden;
 }
 
 .main-news .banner .image-list {
     display: flex;
-    overflow: hidden;
+    transition: transform .2s linear;
 }
 
 .main-news .banner .image-list .item {
@@ -45,7 +46,12 @@
     flex: 1;
 }
 
-.main-news .banner .title-list .item:hover {
+/* .main-news .banner .title-list .item:hover {
+    background: rgba(255, 255, 255, 0.15);
+    color: #f3c258;
+} */
+
+.main-news .banner .title-list .item.active {
     background: rgba(255, 255, 255, 0.15);
     color: #f3c258;
 }
@@ -112,6 +118,7 @@
     text-overflow: ellipsis;
     overflow: hidden;
 }
+
 .main-news .news .news-list .item span {
     width: 34px;
     font-size: 12px;

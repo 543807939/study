@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <style>
+      .banner {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+      }
+      .banner .indicator {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+      }
+      .banner .indicator > li.item {
+        width: 18px;
+        height: 18px;
+        margin-right: 6px;
+        border-radius: 9px;
+        background-color: rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+      }
+      .banner .indicator > li.item.active {
+        width: 36px;
+        background: #fff;
+      }
+      .banner .images {
+        display: flex;
+        height: 100%;
+        transition: transform linear 0.3s;
+      }
+      .banner .images li.item {
+        width: 100%;
+      }
+      .banner .images img {
+        height: 550px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="banner">
+      <ul class="images"></ul>
+      <ul class="indicator"></ul>
+    </div>
+    <div class="control-btn">
+      <button class="img-control-btn privious">上一个</button>
+      <button class="img-control-btn next">下一个</button>
+    </div>
+    <script src="./js/banner.js"></script>
+    <script>
+      const imagesBox = document.querySelector(".images");
+      const indicatorBox = document.querySelector(".indicator");
+
+      for (const item in banners) {
+        const li = document.createElement("li");
+        li.classList.add("item");
+        const img = document.createElement("img");
+        img.src = `https://res.vmallres.com/${banners[item].imgUrl}`;
+        li.append(img);
+        imagesBox.append(li);
+        // 添加li
+        const indicatorItem = document.createElement("li");
+        indicatorItem.classList.add("item");
+        indicatorItem.index = item;
+        indicatorItem.addEventListener("click", (e) => {
+          const index = e.target.index;
+          changeBanner(index - activeItem);
+        });
+        indicatorBox.append(indicatorItem);
+      }
+
+      // 复制第一个和最后一个元素
+      const firstEl = imagesBox.children[0].cloneNode(true);
+      const lastEl = imagesBox.children[banners.length - 1].cloneNode(true);
+      imagesBox.append(firstEl);
+      imagesBox.prepend(lastEl);
+
+      const imageElList = imagesBox.querySelectorAll(".item");
+      const indicatorList = indicatorBox.querySelectorAll(".item");
+      let activeItem = 0;
+
+      indicatorList[activeItem].classList.add("active");
+
+      function changeBanner(i = 1) {
+        indicatorList[activeItem].classList.remove("active");
+        activeItem++;
+        if (activeItem >= indicatorList.length) {
+          activeItem = 0;
+        }
+        indicatorList[activeItem].classList.add("active");
+        imagesBox.style.transform = `translateX(-${activeItem * 100}%)`;
+      }
+      let timer = null;
+      function startTimer() {
+        timer = setInterval(changeBanner, 2000);
+      }
+      function stopTimer() {
+        clearInterval(timer);
+      }
+
+      const bannerBox = document.querySelector(".banner");
+      bannerBox.addEventListener("mouseover", () => {
+        stopTimer();
+      });
+      bannerBox.addEventListener("mouseout", () => {
+        startTimer();
+      });
+
+      const nextBtn = document.querySelector(".next");
+      const priviousBtn = document.querySelector(".privious");
+      nextBtn.addEventListener("click", () => {
+        changeBanner();
+      });
+      priviousBtn.addEventListener("click", () => {
+        changeBanner(-1);
+      });
+
+      startTimer();
+    </script>
+  </body>
+</html>

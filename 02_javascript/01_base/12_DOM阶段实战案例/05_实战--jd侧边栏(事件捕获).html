@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .tool-bar {
+            position: fixed;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .tool-bar .item {
+            position: relative;
+            width: 34px;
+            height: 35px;
+            margin-bottom: 1px;
+            border-radius: 3px 0 0 3px;
+            background: #7a6e6e url('./image/sprite.png') no-repeat;
+            background-position-x: -48px;
+            cursor: pointer;
+        }
+
+        /* .tool-bar .item:hover {
+            background-color: #c81623;
+        } */
+
+        /* .tool-bar .item:hover .title {
+            width: 70px;
+
+        } */
+
+        .tool-bar .item:nth-child(1) {
+            background-position: -86px -176px;
+        }
+
+        .tool-bar .item .title {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 0;
+            height: 35px;
+            margin-right: 34px;
+            font-size: 14px;
+            color: #fff;
+            line-height: 35px;
+            text-align: center;
+            border-radius: 2px;
+            background-color: #c81623;
+            overflow: hidden;
+            transition: width .1s linear;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="tool-bar">
+        <div class="item">
+            <div class="icon"></div>
+            <div class="title">京东会员</div>
+        </div>
+        <div class="item">
+            <div class="icon"></div>
+            <div class="title">购物车</div>
+        </div>
+        <div class="item">
+            <div class="icon"></div>
+            <div class="title">我的关注</div>
+        </div>
+        <div class="item">
+            <div class="icon"></div>
+            <div class="title">我的消息</div>
+        </div>
+        <div class="item">
+            <div class="icon"></div>
+            <div class="title">咨询JIMI</div>
+        </div>
+    </section>
+    <script>
+        const toolBar = document.querySelector('.tool-bar')
+        const items = document.querySelectorAll('.item')
+        for (let index = 1; index < items.length; index++) {
+            items[index].style.backgroundPositionY = `-${50 * (index-1)}px`
+        }
+
+        toolBar.addEventListener('mouseover', function (e) {
+            if (e.target.classList.contains('item')) {
+                e.stopPropagation()
+                e.target.style.backgroundColor = '#c81623'
+                e.target.querySelector('.title').style.width = '70px'
+            }
+        }, {
+            capture: true
+        })
+
+        toolBar.addEventListener('mouseout', function (e) {
+            if (e.target.classList.contains('item')) {
+                e.stopPropagation()
+                e.target.style.backgroundColor = '#7a6e6e'
+                e.target.querySelector('.title').style.width = '0'
+            }
+        }, {
+            capture: true
+        })
+    </script>
+</body>
+
+</html>

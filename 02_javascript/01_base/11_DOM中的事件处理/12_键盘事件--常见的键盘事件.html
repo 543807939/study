@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="username">姓名：</label>
+    <input type="text" name="username" id="username">
+    <script>
+        const usernameBox = document.querySelector('#username')
+
+        usernameBox.addEventListener('keydown', e => {
+            console.log('keydown事件触发');
+            console.log(e);
+        })
+
+        usernameBox.addEventListener('keypress', e => {
+            console.log('keypress事件触发');
+        })
+
+        usernameBox.addEventListener('keyup', e => {
+            console.log('keyup事件触发');
+            if (e.code === 'Enter') {
+                console.log('发送请求');
+            }
+        })
+
+        document.addEventListener('keypress', e => {
+            if (e.code === 'KeyS') {
+                usernameBox.focus()
+            }
+        })
+    </script>
+</body>
+
+</html>

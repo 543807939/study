@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 1. window的查看
+      // ECMAScript规范: 全局对象 => golbalThis
+
+      // 2. 补充方法
+      // open() 打开一个新的窗口
+      // close() 关闭当前窗口
+
+      // 3. hashchange事件
+      window.addEventListener("hashchange", (e) => {
+        console.log(location.hash);
+      });
+    </script>
+  </body>
+</html>

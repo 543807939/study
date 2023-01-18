@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div class="box" style="font-size: 14px;">我是盒子</div>
+    <script>
+        const box = document.querySelector('.box')
+        box.addEventListener('click', () => {
+            //  1. style获取属性要使用小驼峰命名法
+            console.log(box.style);
+            console.log(box.style.fontSize);
+            //  2. style属性设置为空会恢复默认值
+            box.style.color = ''
+            //  3. 设置多个样式
+            box.style.cssText = 'font-size:50px;color:#f08;'
+        })
+    </script>
+</body>
+
+</html>

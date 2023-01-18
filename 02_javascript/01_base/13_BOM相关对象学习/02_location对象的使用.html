@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="assign-btn">assign百度</button>
+    <button id="replace-btn">replace百度</button>
+    <button id="reload-btn">reload</button>
+    <script>
+      console.log(location.href);
+      const assingBtn = document.querySelector("#assign-btn");
+      const replaceBtn = document.querySelector("#replace-btn");
+      const reloadBtn = document.querySelector("#reload-btn");
+
+      assingBtn.addEventListener("click", () => {
+        location.assign("http://www.baidu.com");
+      });
+      replaceBtn.addEventListener("click", () => {
+        location.replace("http://www.baidu.com");
+      });
+      reloadBtn.addEventListener("click", () => {
+        location.reload("http://www.baidu.com");
+      });
+
+      // URLSearchParams
+      const urlSearchParams = "?name=zhangsan&age=14";
+      const searchParams = new URLSearchParams(urlSearchParams);
+      console.log(searchParams);
+      const name = searchParams.get("name");
+      console.log(name);
+    </script>
+  </body>
+</html>

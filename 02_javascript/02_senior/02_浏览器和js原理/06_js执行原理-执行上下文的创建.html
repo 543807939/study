@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var message = "Global Message";
+
+      function foo() {
+        var message = "Foo Message";
+      }
+
+      var num1 = 10;
+      var num2 = 20;
+      var result = num1 + num2;
+      console.log(result);
+
+      /* 
+        1. 先在全局创建一个GlobalObject
+        2. 给GlobalObject添加全局属性（Math，Object，Date，String等）
+        3. 将this指向GlobalObject
+        4. 变量提升
+        5. 执行代码
+      */
+    </script>
+  </body>
+</html>

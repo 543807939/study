@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 300px;
+            height: 300px;
+            background-color: #f08;
+        }
+
+        .box span {
+            width: 200px;
+            height: 200px;
+            background: #08f;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <span></span>
+    </div>
+    <script>
+        const bodyEl = document.body
+        const boxEl = document.querySelector('.box')
+        const spanEl = boxEl.querySelector('span')
+
+        bodyEl.addEventListener('click', () => {
+            console.log('body被点击了');
+        })
+        boxEl.addEventListener('click', () => {
+            console.log('box被点击了');
+        })
+        spanEl.addEventListener('click', () => {
+            console.log('span被点击了');
+        })
+
+        // 事件流分为两个阶段: 冒泡阶段和捕获阶段
+        // 默认是冒泡阶段 从实际点击的元素到body元素
+        // 捕获阶段则是从body往下到实际点击的元素
+
+        // addEventListener可以传入第三个参数为true设置为捕获阶段
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        font: 12px/150% PingFangSC-Regular;
+
+        color: #333333;
+
+        background: #fff;
+
+        margin: 0;
+
+        padding: 0;
+
+        text-decoration: none;
+      }
+
+      .clearfix {
+        zoom: 1;
+      }
+
+      .clearfix:after {
+        content: ".";
+
+        display: block;
+
+        clear: both;
+
+        visibility: hidden;
+
+        font-size: 0;
+
+        height: 0;
+
+        line-height: 0;
+      }
+
+      .lhh40 {
+        line-height: 40px;
+
+        height: 40px;
+      }
+
+      .fl,
+      .floatl {
+        float: left;
+      }
+
+      .fs16 {
+        font-size: 16px;
+      }
+
+      .c_fff {
+        color: #fff;
+      }
+
+      .textc,
+      .tc {
+        text-align: center;
+      }
+
+      .typo_bold {
+        font-weight: bold;
+      }
+
+      .stepItem {
+        background: #bebebe;
+
+        box-sizing: border-box;
+
+        position: relative;
+      }
+
+      /* 为步骤数字添加样式 */
+
+      .stepItem i {
+        width: 25px;
+
+        height: 25px;
+
+        display: inline-block;
+
+        border-radius: 50%;
+
+        background-color: #fff;
+
+        transform: scale(0.8, 0.8);
+
+        -ms-transform: scale(7deg); /* IE 9 */
+
+        -moz-transform: scale(7deg); /* Firefox */
+
+        -webkit-transform: scale(7deg); /* Safari 和 Chrome */
+
+        -o-transform: scale(7deg); /* Opera */
+
+        font-weight: bold;
+
+        color: #bebebe;
+      }
+
+      /* 为每个步骤末尾加灰色三角形和白色边框 */
+
+      .stepItem::after {
+        content: "";
+
+        border: 2px solid #fff;
+
+        border-bottom: none;
+
+        border-left: none;
+
+        background-color: #bebebe;
+
+        height: 30px;
+
+        width: 27px;
+
+        position: absolute;
+
+        display: block;
+
+        top: 5px;
+
+        right: -15px;
+
+        z-index: 10;
+
+        transform: rotate(45deg);
+      }
+
+      /* 当前步骤加绿色三角形和白色边框 */
+
+      .stepBox .active:after {
+        background-color: #00d2c3;
+
+        content: "";
+
+        border: 2px solid #fff;
+
+        border-bottom: none;
+
+        border-left: none;
+
+        height: 28px;
+
+        width: 27px;
+
+        position: absolute;
+
+        display: block;
+
+        top: 5px;
+
+        right: -15px;
+
+        z-index: 10;
+
+        transform: rotate(45deg);
+      }
+
+      /* 当前步骤中的样式修改 */
+
+      .stepBox .active {
+        background-color: #00d2c3;
+      }
+
+      .stepBox .active i {
+        color: #00d2c3;
+      }
+
+      /* 取消最后一项所有的after伪类 */
+
+      .stepItem:last-child::after {
+        content: "";
+
+        border: none;
+
+        height: 0;
+
+        width: 0;
+
+        z-index: 11;
+      }
+    </style>
+  </head>
+  <body>
+    await也不会阻塞dom的解析,script下载完之后会直接执行,并且执行顺序不确定
+    下载完执行
+
+    <div class="stepBox clearfix lhh40 mt40">
+      <div class="stepItem fl fs16 c_fff textc lhh40" style="width: 382px">
+        <i class="">1</i>
+
+        <span class="c_fff typo_bold">买家申请售后</span>
+      </div>
+
+      <div
+        class="stepItem fl fs16 c_fff textc lhh40 active"
+        style="width: 400px"
+      >
+        <i class="">2</i>
+
+        <span class="c_fff typo_bold">卖家处理退款申请</span>
+      </div>
+
+      <div class="stepItem fl fs16 c_fff textc lhh40" style="width: 416px">
+        <i class="">3</i>
+
+        <span class="c_fff typo_bold">退款完毕</span>
+      </div>
+    </div>
+  </body>
+</html>

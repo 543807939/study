@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    defer 使script下载不会阻塞html的解析,等到DomContentLoaded事件之前,才会执行下载的文件  <br>
+    执行是按顺序执行的  <br>
+    dom加载完=>执行defer=>执行domContentLoaded
+    <script src="./js/test1.js" defer></script>
+    <script src="./js/test2.js" defer></script>
+  </body>
+</html>

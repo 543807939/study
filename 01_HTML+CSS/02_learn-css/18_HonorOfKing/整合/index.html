@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="all">
-    <meta name="description" content="《王者荣耀》是腾讯天美工作室推出的英雄竞技手游，不是一个人的王者，而是团队的荣耀！5v5王者峡谷PVP对战，领略英雄竞技的酣畅淋漓！丰富的游戏模式等你参与，体验突破传统、英雄竞技新形态！ ">
+    <meta name="description"
+        content="《王者荣耀》是腾讯天美工作室推出的英雄竞技手游，不是一个人的王者，而是团队的荣耀！5v5王者峡谷PVP对战，领略英雄竞技的酣畅淋漓！丰富的游戏模式等你参与，体验突破传统、英雄竞技新形态！ ">
     <meta name="keywords" content="王者荣耀,王者荣耀下载,王者荣耀电脑版">
     <meta name="author" content="tx">
     <meta name="copyright" content="tx">
@@ -1151,6 +1152,25 @@
                 })
             }
         }
+
+        const tab_control = document.querySelectorAll('.tab_control')
+        const tab_controls = Array.from(tab_control).map(item => {
+            return {
+                active: null,
+                item
+            }
+        })
+        tab_controls.forEach(tab_control => {
+            Array.from(tab_control.item.querySelectorAll('.item')).forEach(item => {
+                console.log(item);
+                item.addEventListener('click', e => {
+                    console.log('点击了');
+                    tab_control.active && tab_control.active.classList.remove('active')
+                    tab_control.active = item
+                    item.classList.add('active')
+                })
+            })
+        });
     })
 </script>
 

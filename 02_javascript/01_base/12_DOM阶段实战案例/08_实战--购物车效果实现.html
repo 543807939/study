@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table {
+        margin: 100px auto 0;
+        border-collapse: collapse;
+      }
+      table th,
+      td {
+        padding: 10px 20px;
+        text-align: center;
+        border: 1px solid #000;
+      }
+    </style>
+  </head>
+  <body>
+    <table id="bookTable">
+      <tr>
+        <th>编号</th>
+        <th>书籍名称</th>
+        <th>出版日期</th>
+        <th>价格</th>
+        <th>购买数量</th>
+        <th>操作</th>
+      </tr>
+    </table>
+    <h3 style="text-align: center">
+      总价格：<span class="total-price"></span>
+    </h3>
+    <script>
+      const bookList = [
+        {
+          id: 1,
+          name: "《算法导论》",
+          date: "2006-02",
+          price: 34.0,
+          count: 3,
+        },
+        {
+          id: 2,
+          name: "《UNIX编程艺术》",
+          date: "2006-02",
+          price: 45.0,
+          count: 3,
+        },
+        {
+          id: 3,
+          name: "《编程珠玑》",
+          date: "2006-02",
+          price: 72.0,
+          count: 3,
+        },
+        {
+          id: 4,
+          name: "《深入浅出Vue.js》",
+          date: "2006-02",
+          price: 128.0,
+          count: 3,
+        },
+      ];
+      const bookTable = document.querySelector("#bookTable");
+      const fragment = document.createDocumentFragment();
+      bookList.forEach((item) => {
+        const tr = document.createElement("tr");
+        fragment.append(tr);
+        for (const key in item) {
+          const td = document.createElement("td");
+          if (key === "price") {
+            td.textContent = "￥" + item[key];
+          } else {
+            td.textContent = item[key];
+            const addBtn = document.createElement("button");
+            addBtn.textContent = "+";
+            addBtn.addEventListener("click", (e) => {
+              getTotalPrice();
+            });
+            td.append(addBtn);
+          }
+
+          tr.append(td);
+        }
+        const deleteTd = document.createElement("td");
+        const deleteBtn = document.createElement("button");
+        deleteBtn.textContent = "删除";
+        deleteBtn.addEventListener("click", (e) => {
+          const deleteRow = e.target.parentNode.parentNode;
+          const deleteIndex = deleteRow.sectionRowIndex;
+          bookList.splice(deleteIndex - 1, 1);
+          deleteRow.remove();
+          getTotalPrice();
+        });
+        deleteTd.append(deleteBtn);
+        tr.append(deleteTd);
+      });
+      bookTable.append(fragment);
+
+      // 计算总价
+      const totalPrice = document.querySelector(".total-price");
+
+      function getTotalPrice() {
+        const totalPriceValue = bookList.reduce((previousTotal, item) => {
+          return previousTotal + item.price * item.count;
+        }, 0);
+        totalPrice.textContent = "￥" + totalPriceValue;
+      }
+
+      getTotalPrice();
+    </script>
+  </body>
+</html>

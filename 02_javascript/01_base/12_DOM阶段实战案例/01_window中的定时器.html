@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="cancelInterval">取消Interval</button>
+    <button id="cancelTimeOut">取消TimeOut</button>
+    <script>
+        function foo() {
+            console.log('foo函数被执行');
+        }
+
+        function bar() {
+            console.log('bar函数执行');
+        }
+
+        const timeoutId = setTimeout(foo, 5000)
+        const intervalId = setInterval(bar, 1000)
+
+        const cancelInterval = document.querySelector('#cancelInterval')
+        const cancelTimeOut = document.querySelector('#cancelTimeOut')
+
+        cancelInterval.addEventListener('click', () => {
+            clearInterval(intervalId)
+        })
+
+        cancelTimeOut.addEventListener('click', () => {
+            clearInterval(timeoutId)
+        })
+    </script>
+</body>
+
+</html>

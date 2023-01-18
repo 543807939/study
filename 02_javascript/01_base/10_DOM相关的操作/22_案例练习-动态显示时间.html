@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            height: 200px;
+            margin-top: 40px;
+            line-height: 200px;
+            text-align: center;
+            font-size: 40px;
+            background: linear-gradient(to right, rgba(256, 0, 128, .6), rgba(0, 256, 126, .6));
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+
+    </div>
+    <script>
+        function getTime() {
+            function addZero(num) {
+                return (num + '').padStart(2, '0')
+            }
+            const date = new Date()
+            const year = date.getFullYear()
+            const month = date.getMonth() + 1
+            const day = date.getDate()
+            const hours = date.getHours()
+            const minute = date.getMinutes()
+            const second = date.getSeconds()
+            return `${addZero(year)}年${addZero(month)}月${addZero(day)}日 ${addZero(hours)}:${addZero(minute)}:${addZero(second)}`
+        }
+        const box = document.querySelector('.box')
+        box.textContent = getTime()
+        setInterval(() => {
+            box.textContent = getTime()
+        }, 1000);
+    </script>
+</body>
+
+</html>

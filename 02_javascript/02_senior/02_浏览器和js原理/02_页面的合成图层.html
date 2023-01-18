@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 300px;
+        height: 300px;
+        background-color: #f08;
+      }
+      .container {
+        width: 200px;
+        height: 200px;
+        background-color: #f80;
+        transition: transform 0.3s linear;
+        /* transition: margin 0.3s linear; */
+      }
+      .container:hover {
+        transform: scale(0.6);
+        /* transform: translateX(100px); */
+        /* margin-left: 100px; */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+    <div class="container"></div>
+    <script>
+      // transition 对transform做动画会先生成一个新的图层然后再做动画,相对margin性能更高
+      // opacity 在执行动画的时候也会生成一个新的图层
+    </script>
+  </body>
+</html>

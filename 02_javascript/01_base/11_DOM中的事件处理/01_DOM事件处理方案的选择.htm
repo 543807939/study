@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 直接在html中编写 -->
+    <button onclick="console.log('点击')">点击</button>
+    <button class="btn btn1">点击1</button>
+    <button class="btn btn2">点击2</button>
+    <script>
+        const btn1 = document.querySelector('.btn1')
+        const btn2 = document.querySelector('.btn2')
+
+        /* onclick属性 */
+        btn1.onclick = () => {
+            console.log('btn1');
+        }
+        const btn2Fn1 = () => {
+            console.log('btn2Fn1');
+        }
+        const btn2Fn2 = () => {
+            console.log('btn2Fn2');
+        }
+        /* addEventListener */
+        btn2.addEventListener('click', btn2Fn1)
+        btn2.addEventListener('click', btn2Fn2)
+    </script>
+</body>
+
+</html>

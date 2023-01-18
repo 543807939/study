@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .top-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 45px;
+            color: #fff;
+            font-size: 14px;
+            background-color: #333;
+
+            transition: height .3s linear;
+            overflow: hidden;
+        }
+
+        .top-bar .delete {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 31px;
+            height: 45px;
+            text-align: center;
+        }
+
+        .top-bar .delete img {
+            width: 10px;
+            height: 10px;
+        }
+
+        .top-bar .icon {
+            display: flex;
+            align-items: center;
+
+            width: 45px;
+            height: 45px;
+            text-align: center;
+        }
+
+        .top-bar .icon img {
+            width: 30px;
+            height: 30px;
+        }
+
+        .top-bar .title {
+            flex: 1;
+        }
+
+        .top-bar .open {
+            height: 45px;
+            width: 103px;
+            line-height: 45px;
+            text-align: center;
+            background-color: #f63515;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="top-bar">
+        <div class="delete">
+            <img src="./image/close.png" alt="">
+        </div>
+        <div class="icon">
+            <img src="./image/icon.png" alt="">
+        </div>
+        <span class="title">
+            打开京东App，购物更轻松
+        </span>
+        <div class="open">
+            立即打开
+        </div>
+    </section>
+    <script>
+        const topBar = document.querySelector('.top-bar')
+        const closeBtn = document.querySelector('.delete')
+
+        function handleClose() {
+            topBar.style.height = 0
+        }
+        closeBtn.addEventListener('click', handleClose)
+
+        topBar.addEventListener('transitionend', () => {
+            topBar.remove()
+        })
+
+        setTimeout(handleClose, 3000)
+    </script>
+</body>
+
+</html>

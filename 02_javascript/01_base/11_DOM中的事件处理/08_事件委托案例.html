@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="box">
+        <button data-action="add">新建</button>
+        <button data-action="search">搜索</button>
+        <button data-action="remove">移除</button>
+    </div>
+    <script>
+        const box = document.querySelector('.box')
+        const actionMap = new Map()
+        actionMap.set('add', '点击了新建按钮')
+        actionMap.set('search', '点击了搜索按钮')
+        actionMap.set('remove', '点击了移除按钮')
+        box.addEventListener('click', e => {
+            const action = e.target.dataset.action
+            if (action) {
+                console.log(actionMap.get(action) || '点击了什么');
+            }
+        })
+    </script>
+</body>
+
+</html>

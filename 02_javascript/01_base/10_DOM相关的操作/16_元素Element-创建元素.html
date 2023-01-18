@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .active {
+            color: #fff;
+            background: linear-gradient(to right, rgba(0, 255, 126, .3), rgba(255, 0, 128, .1));
+            user-select: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+
+    </div>
+    <script>
+        const box = document.querySelector('.box')
+
+        // 1. 通过innerHTML(不推荐)
+        // box.innerHTML = `<h1>哈哈哈</h1>`
+
+        // setTimeout(() => {
+        //     const h1 = document.querySelector('h1')
+        //     h1.addEventListener('click', e => {
+        //         h1.classList.toggle('active')
+        //     })
+        // }, 0);
+
+        // 2. document.createElement
+        const h2 = document.createElement('h2')
+        h2.className = 'title'
+        h2.classList.add('active')
+        h2.textContent = '我是标题'
+        box.appendChild(h2)
+        box.append('hhh')
+
+        // Element.append(el)   插入到最后 
+        // Element.preppend(el)   插入到最前 
+        // Element.before(el)   插入到之前,作为兄弟元素 
+        // Element.after(el)   插入到之前,作为兄弟元素 
+        // Element.replaceWith(el)   用el替换Element元素
+
+        
+    </script>
+</body>
+
+</html>

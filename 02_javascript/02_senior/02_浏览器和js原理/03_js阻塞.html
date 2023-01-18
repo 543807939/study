@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      debugger;
+      console.log(111);
+    </script>
+    <p>js代码会阻塞html的解析</p>
+    <p>浏览器内核解析html时,遇到link标签会下载css文件,不会阻塞解析</p>
+    <p>但是如果js代码就会先下载或者执行js,会阻塞html元素的解析</p>
+    <p>
+      因为js中可能会有大量的dom操作,如果边解析边执行js代码,则会产生大量的回流和重绘,降低效率
+    </p>
+  </body>
+</html>

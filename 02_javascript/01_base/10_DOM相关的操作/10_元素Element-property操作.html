@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+        标准的html属性在对应的对象模型中都有对应的property
+     -->
+    <div id="box" class="boxClass" name="boxName" title="boxTitle" age="14">啊啊啊</div>
+    <input type="checkbox" checked>
+    <script>
+        const box = document.querySelector('#box')
+        console.log(box.id, box.className, box.name, box.title, box.age);
+        const inputEle = document.querySelector('input')
+        console.log(inputEle.checked);
+    </script>
+</body>
+
+</html>

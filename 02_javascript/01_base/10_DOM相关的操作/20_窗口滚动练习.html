@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 3000px;
+        }
+
+        .btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            padding: 5px;
+            border: 1px solid #f08;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="btn" hidden>点击回到顶部</div>
+    <script>
+        const btn = document.querySelector('.btn')
+        btn.addEventListener('click', e => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            })
+        })
+        window.addEventListener('scroll', e => {
+            console.log(window.scrollY);
+            if (window.scrollY >= 600) {
+                btn.hidden = false
+            } else {
+                btn.hidden = true
+            }
+        })
+    </script>
+</body>
+
+</html>

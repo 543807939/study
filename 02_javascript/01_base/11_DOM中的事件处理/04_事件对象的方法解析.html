@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 300px;
+            height: 300px;
+            background: #f08;
+        }
+
+        .box p {
+            height: 200px;
+            background-color: #08f;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <p><button>点击</button></p>
+    </div>
+    <a id="link" href="http://www.baidu.com">百度一下,大家吃席</a>
+    <script>
+        const link = document.querySelector('#link')
+        link.addEventListener('click', e => {
+            console.log(e);
+            e.preventDefault()
+        })
+
+        const box = document.querySelector('.box')
+        const p = document.querySelector('p')
+        const btn = document.querySelector('button')
+
+        box.addEventListener('click', e => {
+            console.log(e);
+            console.log('box触发了点击事件');
+        })
+        p.addEventListener('click', e => {
+            console.log('p触发了点击事件');
+        })
+        btn.addEventListener('click', e => {
+            e.stopPropagation();
+            console.log(e);
+            console.log('btn触发了点击事件');
+        })
+    </script>
+</body>
+
+</html>

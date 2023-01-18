@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .msg-box {
+            display: flex;
+            align-items: center;
+            width: 270px;
+            height: 40px;
+            font-size: 16px;
+            color: #fff;
+            line-height: 40px;
+            border-radius: 20px;
+            background-color: rgba(0, 0, 0, .4);
+        }
+
+        .msg-box .avatar {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="msg-box">
+        <img src="" class="avatar" />
+        <p>
+            <span class="username">coder</span>对这件商品感兴趣
+        </p>
+    </section>
+    <script>
+        const tipList = [{
+            iconSrc: 'https://ts3.cn.mm.bing.net/th?id=ORMS.90533c6309f3f08c17cb21f9ba129e3d&pid=Wdp&w=612&h=304&qlt=90&c=1&rs=1&dpr=1&p=0',
+            name: '张三'
+        }, {
+            iconSrc: 'https://img-s-msn-com.akamaized.net/tenant/amp/entityid/BB10piIP.img?w=612&h=304&q=90&m=6&f=jpg&u=t',
+            name: '李四'
+        }, {
+            iconSrc: 'https://ts3.cn.mm.bing.net/th?id=ORMS.6c7a0adc4a23a8d18f05082138f09ef5&pid=Wdp&w=612&h=304&qlt=90&c=1&rs=1&dpr=1&p=0',
+            name: 'coder'
+        }, {
+            iconSrc: 'https://ts3.cn.mm.bing.net/th?id=ORMS.7a983700fd36e8dc695291cc48dbc3ed&pid=Wdp&w=612&h=304&qlt=90&c=1&rs=1&dpr=1&p=0',
+            name: '卞之琳'
+        }, ]
+
+        const msgBox = document.querySelector('.msg-box')
+        const avatarBox = msgBox.querySelector('.avatar')
+        const nameBox = msgBox.querySelector('.username')
+
+        let index = 0
+
+        function bar() {
+            index === tipList.length && (index = 0)
+            avatarBox.src = tipList[index].iconSrc
+            nameBox.textContent = tipList[index].name
+            index++
+        }
+
+        bar()
+        setInterval(bar, 1000)
+    </script>
+</body>
+
+</html>
